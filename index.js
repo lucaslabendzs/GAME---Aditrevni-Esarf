@@ -43,3 +43,12 @@ caixa.addEventListener("keydown", function(event) {
         botao.click(); 
     }
 });
+//evitar erros de nao atualizar a pagina
+window.addEventListener('pageshow', function (event) {
+    const navEntries = performance.getEntriesByType("navigation");
+    const isBack = navEntries.length > 0 && navEntries[0].type === "back_forward";
+
+    if (event.persisted || isBack) {
+        location.reload();
+    }
+});

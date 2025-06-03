@@ -36,9 +36,9 @@
     <div id="local-resposta">
 
     </div>
-    <footer class="rodape">
+    <div class="rodape">
         <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</P>
-    </footer>
+    </div>
     <script src="index.js"></script>
 </body>
 

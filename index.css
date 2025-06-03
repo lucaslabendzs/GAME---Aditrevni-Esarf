@@ -86,13 +86,14 @@ input[type="submit"]:hover {
     padding: 10px 0;
     background: inherit; 
     font-size: 0.9em;
-    position: fixed; 
+    position: center; 
     bottom: 0;
     width: 100%;
+    margin-top: 50px;
 }
 
 #local-resposta{
-  
+    margin-block: 80%;
     margin-top: 20px;
     font-size: 22px;
     font-weight: bold;
@@ -101,6 +102,7 @@ input[type="submit"]:hover {
     margin-top: 20px;
     border-radius: 12px;
     text-align: center;
+    
 }   
 
 #local-resposta p {
@@ -114,11 +116,28 @@ input[type="submit"]:hover {
  
 }  
 
+.Titulo_reg{
+    text-align: center;
+    margin-bottom: 20px;
+}
 .regras {
     text-align: center;
-    
-
+    margin-top: 60px;
 }
 
+#regras {
+    width: 60%;
+    height: 500px;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 12px;
+    color: #fff;
+    text-align: justify;
+    line-height: 2.0;
+    background: rgba(40, 40, 40, 0.85);
+}
 
-
+.botao-pag{
+    text-align: center;
+    margin-top: 10px;
+}
