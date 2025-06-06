@@ -89,11 +89,11 @@ input[type="submit"]:hover {
     position: center; 
     bottom: 0;
     width: 100%;
-    margin-top: 50px;
+    
 }
 
 #local-resposta{
-    margin-block: 80%;
+    margin-block: 30px;
     margin-top: 20px;
     font-size: 22px;
     font-weight: bold;
