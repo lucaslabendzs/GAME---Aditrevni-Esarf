@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <title>Home page</title>
 </head>
 <body>
@@ -17,23 +16,22 @@
 
     <div class="regras">
         <textarea id="regras" name="regras" rows="20" cols="100" readonly>
-            1. Quanto mais rápido você responder, maior vai ser a pontuação.
-            2. Cada se a resposta estiver errado, você perde um ponto.
-            3. O jogo termina quando todas as palavras forem escritas.
-            4. Não é permitido usar consultas externas ou colar respostas.
-            5. Divirta-se e desafie seus amigos para ver quem faz mais pontos!
-            6. Pontuação e semanal, todas as segundas-feiras a pontuação e resetada.
+            1. Escreva a frase invertida o mais rápido possível.
+            2. O jogo termina quando todas as frases forem escritas.
+            3. Não é permitido usar consultas externas ou colar respostas.
+            4. Divirta-se e desafie seus amigos para ver quem faz mais pontos!
+            5. Pontuação é realizada, através do ranking diario, no qual apenas os 100 jogadores com menor tempo no dia, ganham pontos para acumular no ranking semanal e diario.
         </textarea>
     </div>
 
     <div class="botao-pag">
-        <a href="index.php">
-            <input type="submit" value="Iniciar" id="botao-hom" />
-        </a>
+        <input type="submit" value="Iniciar" id="botao-hom" />
     </div>
+
     <div class="rodape">
         <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
     </div>
-    <script src="index.js"></script>
+
+    <script src="home-pag.js"></script>
 </body>
 </html>
