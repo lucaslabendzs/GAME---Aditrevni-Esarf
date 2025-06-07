@@ -57,6 +57,7 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="utf-8">
   <title>[WEB 1] Exemplo Sistema de Login - Registro</title>
+   <link rel="stylesheet" href="indexcopy.css">
 </head>
 <body>
 <h1>Login</h1>
@@ -68,6 +69,7 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
   <?php exit(); ?>
 <?php endif; ?>
 
+<div class="login-container">
 <?php if ($error): ?>
   <h3 style="color:red;"><?php echo $error_msg; ?></h3>
 <?php endif; ?>

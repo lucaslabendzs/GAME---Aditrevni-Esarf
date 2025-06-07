@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (botaoInicial) {
         botaoInicial.addEventListener("click", function () {
             localStorage.setItem("iniciarCronometro", "true");
-            window.location.href = "index.php";
+            window.location.href = "index1.php";
         });
     }
 });
