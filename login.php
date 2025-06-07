@@ -57,7 +57,7 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="utf-8">
   <title>[WEB 1] Exemplo Sistema de Login - Registro</title>
-   <link rel="stylesheet" href="indexcopy.css">
+   <link rel="stylesheet" href="login.css">
 </head>
 <body>
 <h1>Login</h1>
