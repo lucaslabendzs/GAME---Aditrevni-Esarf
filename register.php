@@ -69,44 +69,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="register.css">
   <meta charset="utf-8">
   <title>[WEB 1] Exemplo Sistema de Login - Registro</title>
 </head>
 <body>
-<h1>Dados para registro de novo usuário</h1>
 
-<?php if ($success): ?>
-  <h3 style="color:lightgreen;">Usuário criado com sucesso!</h3>
-  <p>
-    Seguir para <a href="login.php">login</a>.
-  </p>
-<?php endif; ?>
+<div class="login-container">
+  <h1>Registro de Novo Usuário</h1>
 
-<?php if ($error && !empty($error_msg)): ?>
-  <h3 style="color:red;"><?php echo $error_msg; ?></h3>
-<?php endif; ?>
-
-<form action="register.php" method="post">
-  <label for="name">Nome: </label>
-  <input type="text" name="name" value="<?php echo $name; ?>" required ><br>
-
-  <label for="email">Email: </label>
-  <input type="text" name="email" value="<?php echo $email; ?>"required ><br>
-  <?php if (!empty($erro_email)): ?>
-    <span style="color:red;"><?php echo $erro_email; ?></span><br>
+  <?php if ($success): ?>
+    <h3 style="color: lightgreen;">Usuário criado com sucesso!</h3>
+    <p>Seguir para <a href="login.php">login</a>.</p>
   <?php endif; ?>
 
-  <label for="password">Senha: </label>
-  <input type="password" name="password" value=""required ><br>
+  <?php if ($error && !empty($error_msg)): ?>
+    <h3 style="color: red;"><?php echo $error_msg; ?></h3>
+  <?php endif; ?>
 
-  <label for="confirm_password">Confirmação da Senha: </label>
-  <input type="password" name="confirm_password" value=""required ><br>
+  <form action="register.php" method="post">
+    <label for="name">Nome:</label>
+    <input type="text" name="name" value="<?php echo $name; ?>" required>
 
-  <input type="submit" name="submit" value="Criar usuário">
-</form>
+    <label for="email">Email:</label>
+    <input type="text" name="email" value="<?php echo $email; ?>" required>
+    <?php if (!empty($erro_email)): ?>
+      <span style="color: red;"><?php echo $erro_email; ?></span>
+    <?php endif; ?>
 
-<ul>
-  <li><a href="paginaInicial.php">Voltar</a></li>
-</ul>
+    <label for="password">Senha:</label>
+    <input type="password" name="password" required>
+
+    <label for="confirm_password">Confirmação da Senha:</label>
+    <input type="password" name="confirm_password" required>
+
+    <input type="submit" name="submit" value="Criar usuário">
+  </form>
+
+  <ul>
+    <li><a href="paginaInicial.php">Voltar</a></li>
+  </ul>
+</div>
 </body>
 </html>
