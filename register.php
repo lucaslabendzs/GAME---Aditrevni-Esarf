@@ -88,19 +88,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <form action="register.php" method="post">
   <label for="name">Nome: </label>
-  <input type="text" name="name" value="<?php echo $name;?>" required><br>
+  <input type="text" name="name" value="<?php echo $name; ?>" ><br>
 
   <label for="email">Email: </label>
-  <input type="text" name="email" value="<?php echo $email; ?>"required><br>
+  <input type="text" name="email" value="<?php echo $email; ?>"><br>
   <?php if (!empty($erro_email)): ?>
     <span style="color:red;"><?php echo $erro_email; ?></span><br>
   <?php endif; ?>
 
   <label for="password">Senha: </label>
-  <input type="password" name="password" value="" required><br>
+  <input type="password" name="password" value=""><br>
 
   <label for="confirm_password">Confirmação da Senha: </label>
-  <input type="password" name="confirm_password" value="" required><br>
+  <input type="password" name="confirm_password" value=""><br>
 
   <input type="submit" name="submit" value="Criar usuário">
 </form>
