@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </form>
 
 <ul>
-  <li><a href="index.php">Voltar</a></li>
+  <li><a href="paginaInicial.php">Voltar</a></li>
 </ul>
 </body>
 </html>

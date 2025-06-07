@@ -28,7 +28,7 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
           $_SESSION["user_name"] = $user["name"];
           $_SESSION["user_email"] = $user["email"];
 
-          header("Location: " . dirname($_SERVER['SCRIPT_NAME']) . "/index.php");
+          header("Location: " . dirname($_SERVER['SCRIPT_NAME']) . "/paginaInicial.php");
           exit();
         }
         else {
@@ -85,7 +85,7 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
 </form>
 
 <ul>
-  <li><a href="index.php">Voltar</a></li>
+  <li><a href="paginaInicial.php">Voltar</a></li>
 </ul>
 </p>
 </body>

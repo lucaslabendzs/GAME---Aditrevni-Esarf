@@ -1,3 +1,7 @@
+<?php
+  require "authenticate.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -33,8 +37,12 @@
     </div>
 
     <div class = "logout">
-        <li><a href="logout.php">Logout</a></li>
+     <li><a href="login.php">Login</a></li>
+     <li><a href="register.php">Registrar-se</a></li>
+     <li><a href="logout.php">Logout</a></li>
     </div>
+
+
     <script src="home-pag.js"></script>
 </body>
 </html>
