@@ -1,0 +1,143 @@
+body{
+    background: #3F5EFB;
+     background: linear-gradient(to right, #667eea, #764ba2);
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}   
+
+.titulo{ 
+    font-size: 15px;
+    -webkit-text-stroke: #333 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color:white;
+    
+}
+.caixa{
+    text-align: center;
+}
+
+
+#caixa-texto{
+    width: 300px;
+    height: 20px;
+}
+
+.caixa2{
+    padding-top: 5px;
+    text-align: center;
+}
+
+.frase{
+    font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #534d4d, #000000);
+  font-size: 20px;
+  padding: 1px 10px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  margin: 40px auto 30px;
+  width: fit-content;
+  max-width: 90%;
+ 
+
+ 
+}
+
+input{
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+input[type="text"], input[type="submit"] {
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 8px #fff;
+}
+
+input[type="submit"] {
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #eee;
+}
+.caixa, .caixa2 {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: fit-content;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+.rodape {
+    flex-shrink: 0; 
+    text-align: center;
+    padding: 10px 0;
+    background: inherit; 
+    font-size: 0.9em;
+    position: center; 
+    bottom: 0;
+    width: 100%;
+    
+}
+
+#local-resposta{
+    margin-block: 30px;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    text-align: center;
+    
+}   
+
+#local-resposta p {
+  background: #ffffff;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 15px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+ 
+}  
+
+.Titulo_reg{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.regras {
+    text-align: center;
+    margin-top: 60px;
+}
+
+#regras {
+    width: 60%;
+    height: 500px;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 12px;
+    color: #fff;
+    text-align: justify;
+    line-height: 2.0;
+    background: rgba(40, 40, 40, 0.85);
+}
+
+.botao-pag{
+    text-align: center;
+    margin-top: 10px;
+}
