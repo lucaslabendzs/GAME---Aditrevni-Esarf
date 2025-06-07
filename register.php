@@ -4,7 +4,7 @@ require "db_functions.php";
 $error = false;
 $success = false;
 $name = $email = "";
-$erro_email = ""; // nova variável para erro específico de e-mail
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (!empty($_POST["name"]) && !empty($_POST["email"]) && 
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verifica se o e-mail contém "@"
     if (strpos($email, '@') === false) {
-      $erro_email = "Email inválido.";
+      $error_msg = "Email inválido.";
       $error = true;
     }
 
@@ -88,19 +88,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <form action="register.php" method="post">
   <label for="name">Nome: </label>
-  <input type="text" name="name" value="<?php echo $name; ?>" ><br>
+  <input type="text" name="name" value="<?php echo $name; ?>" required ><br>
 
   <label for="email">Email: </label>
-  <input type="text" name="email" value="<?php echo $email; ?>"><br>
+  <input type="text" name="email" value="<?php echo $email; ?>"required ><br>
   <?php if (!empty($erro_email)): ?>
     <span style="color:red;"><?php echo $erro_email; ?></span><br>
   <?php endif; ?>
 
   <label for="password">Senha: </label>
-  <input type="password" name="password" value=""><br>
+  <input type="password" name="password" value=""required ><br>
 
   <label for="confirm_password">Confirmação da Senha: </label>
-  <input type="password" name="confirm_password" value=""><br>
+  <input type="password" name="confirm_password" value=""required ><br>
 
   <input type="submit" name="submit" value="Criar usuário">
 </form>
