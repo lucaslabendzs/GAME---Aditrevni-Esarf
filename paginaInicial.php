@@ -24,7 +24,7 @@
             2. O jogo termina quando todas as frases forem escritas.
             3. Não é permitido usar consultas externas ou colar respostas.
             4. Divirta-se e desafie seus amigos para ver quem faz mais pontos!
-            5. Pontuação é realizada, através do ranking diario, no qual apenas os 100 jogadores com menor tempo no dia, ganham pontos para acumular no ranking semanal e diario.
+            5. Pontuação é realizada, através do ranking diario, no qual apenas os jogadores com menor tempo no dia, ganham pontos para acumular no ranking semanal e diario.
         </textarea>
     </div>
 
@@ -36,10 +36,16 @@
         <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
     </div>
 
-    <div class = "logout">
-     <li><a href="login.php">Login</a></li>
-     <li><a href="register.php">Registrar-se</a></li>
-     <li><a href="logout.php">Logout</a></li>
+    <div class = "opcoes">
+        <div class = "login">
+            <a href="login.php">Login</a>
+        </div>
+        <div class = "registro">
+            <a href="register.php">Registrar-se</a>
+        </div>
+        <div class = "logout">
+            <a href="logout.php">Logout</a>
+        </div>
     </div>
 
 

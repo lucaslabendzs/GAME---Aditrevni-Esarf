@@ -5,5 +5,5 @@
 
   session_destroy();
 
-  header("Location: " . dirname($_SERVER['SCRIPT_NAME']) . "/index.php");
+  header("Location: " . dirname($_SERVER['SCRIPT_NAME']) . "/paginaInicial.php");
 ?>

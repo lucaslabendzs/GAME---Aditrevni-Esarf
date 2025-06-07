@@ -1,6 +1,8 @@
 <?php
 require "db_functions.php";
 require "authenticate.php";
+require "force_authenticate2.php";
+
 
 $error = false;
 $password = $email = "";
@@ -64,6 +66,9 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php if ($login): ?>
     <h3>Você já está logado!</h3>
+    <ul>
+    <li><a href="paginaInicial.php">Voltar</a></li>
+   </ul>
   </body>
   </html>
   <?php exit(); ?>
