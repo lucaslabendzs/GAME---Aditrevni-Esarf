@@ -18,25 +18,19 @@
 
     <div class="Titulo_reg">Regras do Jogo:</div>
 
-    <div class="regras">
-        <textarea id="regras" name="regras" rows="20" cols="100" readonly>
-            1. Escreva a frase invertida o mais rápido possível.
-            2. O jogo termina quando todas as frases forem escritas.
-            3. Não é permitido usar consultas externas ou colar respostas.
-            4. Divirta-se e desafie seus amigos para ver quem faz mais pontos!
-            5. Pontuação é realizada, através do ranking diario, no qual apenas os jogadores com menor tempo no dia, ganham pontos para acumular no ranking semanal e diario.
-        </textarea>
-    </div>
-
+    <div class="regras" id="regras">
+    <ul>
+        <li>Escreva a frase invertida o mais rápido possível.</li>
+        <li>O jogo termina quando todas as frases forem escritas.</li>
+        <li>Não é permitido usar consultas externas ou colar respostas.</li>
+        <li>Divirta-se e desafie seus amigos para ver quem faz mais pontos!</li>
+        <li>Pontuação é realizada, através do ranking diário, no qual apenas os jogadores com menor tempo no dia, ganham pontos para acumular no ranking semanal e diário.</li>
+    </ul>
+</div>
     <div class="botao-pag">
         <input type="submit" value="Iniciar" id="botao-hom" />
     </div>
-
-    <div class="rodape">
-        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
-    </div>
-
-    <div class = "opcoes">
+       <div class = "opcoes">
         <div class = "login">
             <a href="login.php">Login</a>
         </div>
@@ -48,6 +42,12 @@
         </div>
     </div>
 
+
+    <div class="rodape">
+        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
+    </div>
+
+ 
 
     <script src="home-pag.js"></script>
 </body>
