@@ -32,6 +32,9 @@
         <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
     </div>
 
+    <div class = "logout">
+        <li><a href="logout.php">Logout</a></li>
+    </div>
     <script src="home-pag.js"></script>
 </body>
 </html>
