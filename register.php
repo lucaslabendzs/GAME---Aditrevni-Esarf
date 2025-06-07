@@ -1,5 +1,6 @@
 <?php
 require "db_functions.php";
+require "force_authenticate2.php";
 
 $error = false;
 $success = false;
