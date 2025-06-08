@@ -120,6 +120,7 @@ input[type="submit"]:hover {
 .Titulo_reg{
     text-align: center;
     margin-bottom: 20px;
+    padding-top: 45px;
 }
 #regras {
     width: 60%;
@@ -176,7 +177,8 @@ input[type="submit"]:hover {
 .opcoes {
     margin-top: 120px;
     display: flex;
-    justify-content: center;
+    padding-left: 1400px;
+    justify-content: justify;
     gap: 24px;
     margin-top: 32px;
     margin-bottom: 24px;
@@ -198,8 +200,3 @@ input[type="submit"]:hover {
     cursor: pointer;
 }
 
-.opcoes a:hover {
-    background: #eee;
-    color: #764ba2;
-    box-shadow: 0 0 8px #fff;
-}

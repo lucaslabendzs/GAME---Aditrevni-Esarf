@@ -57,7 +57,7 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
   <meta charset="utf-8">
-  <title>[WEB 1] Exemplo Sistema de Login - Registro</title>
+  <title>Login</title>
    <link rel="stylesheet" href="login.css">
 </head>
 <body>
@@ -79,7 +79,7 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
 <?php endif; ?>
 
 <form action="login.php" method="post">
-  <label for="email">Email: </label>
+  <label for="email">Email / Usúario: </label>
   <input type="text" name="email" value="<?php echo $email; ?>" required><br>
 
   <label for="password">Senha: </label>
@@ -90,6 +90,7 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
 
 <ul>
   <li><a href="paginaInicial.php">Voltar</a></li>
+  <li><a href="register.php">Registrar-se</a></li>
 </ul>
 </p>
 </body>

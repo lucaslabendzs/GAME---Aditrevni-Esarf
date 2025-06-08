@@ -12,9 +12,23 @@
     <title>Home page</title>
 </head>
 <body>
+
+
+       <div class = "opcoes">
+        <div class = "login">
+            <a href="login.php">Login</a>
+        </div>
+        <div class = "registro">
+            <a href="register.php">Registrar-se</a>
+        </div>
+        <div class = "logout">
+            <a href="logout.php">Logout</a>
+        </div>
+    </div>
     <header class="titulo">
         <h1>Aditrevni esarf</h1>
     </header>
+    
 
     <div class="Titulo_reg">Regras do Jogo:</div>
 
@@ -29,17 +43,6 @@
 </div>
     <div class="botao-pag">
         <input type="submit" value="Iniciar" id="botao-hom" />
-    </div>
-       <div class = "opcoes">
-        <div class = "login">
-            <a href="login.php">Login</a>
-        </div>
-        <div class = "registro">
-            <a href="register.php">Registrar-se</a>
-        </div>
-        <div class = "logout">
-            <a href="logout.php">Logout</a>
-        </div>
     </div>
 
 

@@ -1,25 +1,23 @@
+<?php
+  require "authenticate.php";
 
-    <?php
-    require "authenticate.php";
-
-    if ($login) {
-      die("
-      <!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8'>
-  <link rel='stylesheet' href='logado.css'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Document</title>
+  if ($login) {
+    die("
+  <!DOCTYPE html>
+  <html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <link rel='stylesheet' href='logado.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
 </head>
-
 <body>
-  <div class='login-container-2'>
-  <h2>Você já está logado!!</h2>
-  <a href='paginaInicial.php' class='button-link'>Voltar</a>
+    <div class='login-container-2'>
+      <h2>Você já está logado!!</h2>
+      <a href='paginaInicial.php' class='button-link'>Voltar</a>
     </div>
 </body>
 </html>
 ");
-    }
-    ?>
+}
+  ?>

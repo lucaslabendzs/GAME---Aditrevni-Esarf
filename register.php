@@ -109,6 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   <ul>
     <li><a href="paginaInicial.php">Voltar</a></li>
+    <a href="login.php">Login</a>
   </ul>
 </div>
 </body>
