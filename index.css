@@ -166,7 +166,7 @@ input[type="submit"]:hover {
 }
 
 #regras li:hover {
-    color: #ffd700;
+    color: #764ba2;
 }
 
 .botao-pag{
@@ -202,14 +202,4 @@ input[type="submit"]:hover {
     background: #eee;
     color: #764ba2;
     box-shadow: 0 0 8px #fff;
-}
-.rodape {
-    flex-shrink: 0; 
-    text-align: center;
-    padding: 10px 0;
-    background: inherit; 
-    font-size: 0.9em;
-    position: fixed; 
-    bottom: 0;
-    width: 100%;
 }

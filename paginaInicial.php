@@ -13,7 +13,7 @@
 </head>
 <body>
     <header class="titulo">
-        <h1>Aditrevni arvralap</h1>
+        <h1>Aditrevni esarf</h1>
     </header>
 
     <div class="Titulo_reg">Regras do Jogo:</div>

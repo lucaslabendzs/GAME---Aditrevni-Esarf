@@ -15,7 +15,7 @@ body {
   color: white;
 }
 
-.login-container {
+.login-container-2 {
   background-color: #1c1c2e;
   padding: 40px;
   border-radius: 20px;
@@ -24,22 +24,22 @@ body {
   text-align: left;
 }
 
-.login-container h2 {
+.login-container-2 h2 {
   margin-bottom: 20px;
 }
 
-.login-container ul {
+.login-container-2 ul {
   margin-top: 10px;
   list-style: none;
   padding-left: 0;
 }
 
-.login-container a {
+.login-container-2 a {
   color: #c77dff;
   text-decoration: none;
 }
 
-.login-container a:hover {
+.login-container-2 a:hover {
   text-decoration: underline;
 }
 .button-link {

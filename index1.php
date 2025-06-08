@@ -16,7 +16,7 @@ require "force_authenticate.php";
 
 <body>
     <header class="titulo">
-        <h1>Aditrevni arvralap</h1>
+        <h1>Aditrevni esarf</h1>
     </header>
     <div class="frase" id="frase">
 
