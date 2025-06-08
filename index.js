@@ -116,7 +116,9 @@ window.addEventListener("DOMContentLoaded", function () {
                 console.log(inverteFrase);
             } else {
                 stop();
-                aparecerFrase.textContent = "Parabéns! Você completou todas as frases!";
+                let tempoUser = document.getElementById("counter").textContent;
+                aparecerFrase.textContent = "Parabéns! Você completou todas as frases! Seu tempo foi: " +  tempoUser;
+                document.getElementById("counter").style.display = "none";
                 botao.disabled = true;
                 caixa.disabled = true;
                 
