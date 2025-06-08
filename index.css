@@ -6,12 +6,14 @@ body{
     font-family: 'Poppins', sans-serif;
 }   
 
-.titulo {
+.titulo{ 
+    font-size: 20px;
+    -webkit-text-stroke: #333 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
+    color:white;
     margin-top: 40px;
-    font-size: 2.2em;
-    color: #fff;
-    letter-spacing: 2px;
+    
 }
 
 .caixa{
@@ -84,10 +86,10 @@ input[type="submit"]:hover {
 .rodape {
     flex-shrink: 0; 
     text-align: center;
-    margin: 10px 0;
+    padding: 10px 0;
     background: inherit; 
     font-size: 0.9em;
-    position: center; 
+    position: fixed; 
     bottom: 0;
     width: 100%;
     
@@ -120,7 +122,10 @@ input[type="submit"]:hover {
 .Titulo_reg{
     text-align: center;
     margin-bottom: 30px;
-    padding-top: 45px;
+    margin-top: 45px;
+    font-size: 23px;
+    font-weight: bold;
+    
 }
 #regras {
     width: 60%;
