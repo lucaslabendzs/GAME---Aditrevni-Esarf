@@ -14,7 +14,7 @@
 <body>
 
 
-       <div class = "opcoes">
+    <div class = "opcoes">
         <div class = "login">
             <a href="login.php">Login</a>
         </div>
