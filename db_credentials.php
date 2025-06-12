@@ -6,4 +6,3 @@
   $table_users = "Users";
   $table_ranking_diario = "RankingDiario";
 ?>
-//comentario
