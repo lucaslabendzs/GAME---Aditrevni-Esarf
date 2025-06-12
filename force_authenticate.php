@@ -20,4 +20,4 @@ if (!$login) {
   </body>
   </html>');
 }
-?>
+?>//jogo fera
