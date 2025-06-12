@@ -4,4 +4,6 @@
   $db_password = "senha";
   $dbname = "projeto_final";
   $table_users = "Users";
+  $table_ranking_diario = "RankingDiario";
 ?>
+//comentario
