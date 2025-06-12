@@ -79,7 +79,7 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
 <?php endif; ?>
 
 <form action="login.php" method="post">
-  <label for="email">Email / Usúario: </label>
+  <label for="email">Email</label>
   <input type="text" name="email" value="<?php echo $email; ?>" required><br>
 
   <label for="password">Senha: </label>
