@@ -1,5 +1,23 @@
 <?php
+require "db_credentials.php";
 require "force_authenticate.php";
+//consultar se o usuario ja jogou hoje
+$conn = mysqli_connect($servername, $username, $db_password, $dbname);
+if (!$conn) {
+    die("Erro de conexão: " . mysqli_connect_error());
+}
+$user_id = $_SESSION['user_id'];
+date_default_timezone_set('America/Sao_Paulo');
+$hoje = date('Y-m-d');
+
+$sql = "SELECT id FROM RankingDiario WHERE user_id = $user_id AND data_jogo = '$hoje'";
+$result = mysqli_query($conn, $sql);
+$ja_jogou = mysqli_num_rows($result) > 0;
+mysqli_close($conn);
+if ($ja_jogou === true) {
+    header("Location: ja_jogou.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
