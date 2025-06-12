@@ -21,11 +21,13 @@ body {
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   width: 350px;
-  text-align: left;
+  text-align: justify;
 }
+
 
 .login-container-2 h2 {
   margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 .login-container-2 ul {
@@ -35,7 +37,6 @@ body {
 }
 
 .login-container-2 a {
-  color: #c77dff;
   text-decoration: none;
 }
 
@@ -43,11 +44,13 @@ body {
   text-decoration: underline;
 }
 .button-link {
+  text-align: center;
   display: inline-block;
   margin-top: 20px;
+  margin-left: 95px;
   padding: 12px 20px;
-  background-color: #7b2cbf;
   color: white;
+  background-color: #7b2cbf;
   text-decoration: none;
   border-radius: 10px;
   font-size: 16px;

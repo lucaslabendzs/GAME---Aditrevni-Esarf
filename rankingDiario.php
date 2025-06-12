@@ -22,14 +22,18 @@ $result = mysqli_query($conn, $sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="rankingDiario.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header class="titulo">
+
+    <div class="ranking-container">
         <h1>Ranking Diário</h1>
     </header>
+
+    <div class="ranking">
     <table>
         <tr>
-            <th>Posição</th>
+            <th class="posi">Posição</th>
             <th>Nome</th>
             <th>Tempo (s)</th>
         </tr>
@@ -45,7 +49,7 @@ $result = mysqli_query($conn, $sql);
             $seg = str_pad($seg, 2, "0", STR_PAD_LEFT);
             $mil = str_pad($mil, 2, "0", STR_PAD_LEFT);
             echo "<tr>
-                    <td>$posicao</td>
+                    <td class='usuario'>$posicao</td>
                     <td>$linha[name]</td>
                     <td>$min:$seg:$mil</td>
                   </tr>";
@@ -53,6 +57,17 @@ $result = mysqli_query($conn, $sql);
         }
         ?>
     </table>
+    </div>
+    </div>
+    <div class = "botao-ranking">
+        <ul>
+            <a href="paginaInicial.php">Voltar</a>
+        </ul>
+    </div>
+
+    <div class="rodape">
+        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
+    </div>
 </body>
 </html>
 <?php

@@ -66,7 +66,7 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
 <?php if ($login): ?>
     <h3>Você já está logado!</h3>
     <ul>
-    <li><a href="paginaInicial.php">Voltar</a></li>
+    <li class="voltar-logado"><a href="paginaInicial.php">Voltar</a></li>
    </ul>
   </body>
   </html>

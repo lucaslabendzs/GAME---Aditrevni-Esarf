@@ -65,5 +65,20 @@ if (mysqli_query($conn, $sql_ranking)) {
     echo "<br>Error creating RankingDiario: " . mysqli_error($conn);
 }
 
+$sql_dias = "CREATE TABLE IF NOT EXISTS $table_dias_calculados (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT(6) UNSIGNED NOT NULL,
+    data_jogo DATE NOT NULL,
+    posicao INT NOT NULL,
+    pontos INT NOT NULL,
+    UNIQUE KEY (user_id, data_jogo),
+    FOREIGN KEY (user_id) REFERENCES Users(id)
+)";
+
+if (mysqli_query($conn, $sql_dias)) {
+    echo "<br>Table DiasCalculados created successfully<br>";
+} else {
+    echo "<br>Error DiasCalculados: " . mysqli_error($conn);
+}
 mysqli_close($conn)
 ?>

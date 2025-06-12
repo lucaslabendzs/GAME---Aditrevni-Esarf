@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     let botaoInicial = document.getElementById("botao-hom");
     if (botaoInicial) {
