@@ -1,3 +1,4 @@
+//função pronta q inverte frase
 function inverterFrase(palavra) {
     return palavra.split('').reverse().join('');
 }
@@ -6,14 +7,15 @@ let hh = 0, mm = 0, ss = 0, ms = 0;
 let tempo = 10;
 let crono;
 
+//função inicia cronometro
 function start() {
     crono = setInterval(relogio, tempo);
 }
-
+//função para encerrar cronometro
 function stop() {
     clearInterval(crono);
 }
-
+//função formata o tempo
 function relogio() {
     ms++;
     if (ms === 100) {
@@ -37,13 +39,13 @@ function relogio() {
 
     document.getElementById("counter").innerHTML = formato;
 }
-
+//função
 window.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("iniciarCronometro") === "true") {
         start();
         localStorage.removeItem("iniciarCronometro");
     }
-
+    //nossa pequena matriz kkk
     let array = [
     ["aula de web um", "teste do trabalho", "renan cucas e kauan", "javascript eh muito legal", "codigo limpo vale ouro"],
     ["vamos aprender a programar", "interface bonita agrada todos", "desenvolvimento web com criatividade", "debugar ajuda a entender", "projetos simples exigem atenção"],
@@ -121,7 +123,17 @@ window.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("counter").style.display = "none";
                 botao.disabled = true;
                 caixa.disabled = true;
-                
+
+                //Enviar o tempo para o php
+                fetch('salva_ranking.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ tempo: tempoUser })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Ranking salvo:', data);
+            });
             }
         } else {
             resposta.textContent = "Errou!!! " + j + "/5";
@@ -131,7 +143,7 @@ window.addEventListener("DOMContentLoaded", function () {
         localResposta.appendChild(resposta);
         caixa.value = "";
     });
-
+//para funcionar o enter
     caixa.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             event.preventDefault();
