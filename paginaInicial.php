@@ -1,4 +1,5 @@
 <?php
+  require "db_credentials.php";
   require "authenticate.php";
 ?>
 
@@ -24,6 +25,9 @@
         <div class = "logout">
             <a href="logout.php">Logout</a>
         </div>
+        <div class = "Ranking Diario">
+            <a href="rankingDiario.php">Ranking Diario</a>
+        </div>
     </div>
     <header class="titulo">
         <h1>Aditrevni esarf</h1>
@@ -36,9 +40,10 @@
     <ul>
         <li>Escreva a frase invertida o mais rápido possível.</li>
         <li>O jogo termina quando todas as frases forem escritas.</li>
-        <li>Não é permitido usar consultas externas ou colar respostas.</li>
+        <li>Não é permitido jogar, e acessar os rankings sem estar logado.</li>
         <li>Divirta-se e desafie seus amigos para ver quem faz mais pontos!</li>
-        <li>Pontuação é realizada, através do ranking diário, no qual apenas os jogadores com menor tempo no dia, ganham pontos para acumular no ranking semanal e diário.</li>
+        <li>Cada usuario tem uma jogada por dia! Entao não desperdice a oportunidade!</li>
+        <li>Pontuação é realizada, através do ranking diário, no qual apenas os jogadores com menor tempo no dia, ganham pontos para acumular no ranking semanal e geral.</li>
     </ul>
 </div>
     <div class="botao-pag">
