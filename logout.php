@@ -7,4 +7,4 @@
 
   header("Location: " . dirname($_SERVER['SCRIPT_NAME']) . "/paginaInicial.php");
 ?>
-//teste
+
