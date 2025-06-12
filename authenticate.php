@@ -1,5 +1,5 @@
 <?php
-  session_start();
+  session_start();//comentario teste
 
   if (isset($_SESSION["user_id"]) && isset($_SESSION["user_name"]) && isset($_SESSION["user_email"])) {
     $login = true;
