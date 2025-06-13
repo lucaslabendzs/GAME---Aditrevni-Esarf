@@ -25,9 +25,14 @@
         <div class = "logout">
             <a href="logout.php">Logout</a>
         </div>
-        <div class = "Ranking Diario">
-            <a href="rankingDiario.php">Ranking Diario</a>
-        </div>
+    </div>
+    <div class = "tabelas">
+        <div class = "RankingDiario">
+                <a href="rankingDiario.php">Ranking Diario</a>
+            </div>
+            <div class = "RankingGeral">
+                <a href="rankingGeral.php">Ranking Geral</a>
+            </div>
     </div>
     <header class="titulo">
         <h1>Aditrevni esarf</h1>

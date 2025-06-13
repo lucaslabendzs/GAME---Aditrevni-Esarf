@@ -5,6 +5,7 @@ $conn = mysqli_connect($servername, $username, $db_password, $dbname);
 if (!$conn) {
     die("Erro de conexão: " . mysqli_connect_error());
 }
+// realizar o select com data de hoje
 date_default_timezone_set('America/Sao_Paulo');
 $hoje = date("Y-m-d");
 $sql = "SELECT Users.name, RankingDiario.tempo_segundos
