@@ -1,15 +1,16 @@
-<?php
-require "db_credentials.php";
-require "force_authenticate.php";
-?>
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Já jogou</title>
+  <html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <link rel='stylesheet' href='ja-jogou.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
 </head>
 <body>
-    <p>ja jogou hoje</p>
+    <div class='ja-jogou'>
+      <h2>Você já jogou hoje!</h2>
+      <p>Volte amanha para jogar novamente!</p>
+      <a href='paginaInicial.php' class='button-link'>Voltar</a>
+    </div>
 </body>
 </html>
