@@ -80,5 +80,35 @@ if (mysqli_query($conn, $sql_dias)) {
 } else {
     echo "<br>Error DiasCalculados: " . mysqli_error($conn);
 }
-mysqli_close($conn)
+mysqli_close($conn);
+
+$sql_ligas = "CREATE TABLE IF NOT EXISTS Ligas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    descricao TEXT,
+    palavra_chave VARCHAR(100) NOT NULL,
+    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP
+)";
+
+if (mysqli_query($conn, $sql_ligas)) {
+    echo "<br>Table Ligas created successfully<br>";
+} else {
+    echo "<br>Error creating Ligas: " . mysqli_error($conn);
+}
+
+$sql_liga_usuarios = "CREATE TABLE IF NOT EXISTS LigaUsuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    liga_id INT NOT NULL,
+    user_id INT(6) UNSIGNED NOT NULL,
+    FOREIGN KEY (liga_id) REFERENCES Ligas(id),
+    FOREIGN KEY (user_id) REFERENCES Users(id)
+)";
+
+if (mysqli_query($conn, $sql_liga_usuarios)) {
+    echo "<br>Table LigaUsuarios created successfully<br>";
+} else {
+    echo "<br>Error creating LigaUsuarios: " . mysqli_error($conn);
+}
+
+
 ?>

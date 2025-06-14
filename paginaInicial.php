@@ -54,6 +54,9 @@
     <div class="botao-pag">
         <input type="submit" value="Iniciar" id="botao-hom" />
     </div>
+    <div>
+        <a href="ligas.php">Ligas</a>
+    </div>
 
 
     <div class="rodape">
