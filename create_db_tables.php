@@ -80,7 +80,7 @@ if (mysqli_query($conn, $sql_dias)) {
 } else {
     echo "<br>Error DiasCalculados: " . mysqli_error($conn);
 }
-mysqli_close($conn);
+
 
 $sql_ligas = "CREATE TABLE IF NOT EXISTS Ligas (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -105,10 +105,11 @@ $sql_liga_usuarios = "CREATE TABLE IF NOT EXISTS LigaUsuarios (
 )";
 
 if (mysqli_query($conn, $sql_liga_usuarios)) {
-    echo "<br>Table LigaUsuarios created successfully<br>";
+    echo "<br>Table LigaUsuarios Criado com sucesso<br>";
 } else {
-    echo "<br>Error creating LigaUsuarios: " . mysqli_error($conn);
+    echo "<br>Erro ao criar liga: " . mysqli_error($conn);
 }
 
+mysqli_close($conn);
 
 ?>

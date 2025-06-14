@@ -54,7 +54,7 @@
     <div class="botao-pag">
         <input type="submit" value="Iniciar" id="botao-hom" />
     </div>
-    <div>
+    <div> <!-- Criar css-->
         <a href="ligas.php">Ligas</a>
     </div>
 

@@ -26,12 +26,18 @@ $result = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <title>Ranking Semanal</title>
+    <link rel="stylesheet" href="rankingSemanal.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Ranking Semanal</h1>
-    <table border="1">
+    <div class="ranking-container">
+      <header>  
+        <h1>Ranking Semanal(100 melhores)</h1>
+    </header>
+    <div class="ranking">
+    <table>
         <tr>
-            <th>Posição</th>
+            <th class="posi">Posição</th>
             <th>Nome</th>
             <th>Pontos</th>
         </tr>
@@ -47,7 +53,13 @@ $result = mysqli_query($conn, $sql);
         }
         ?>
     </table>
-    <a href="paginaInicial.php">Voltar</a>
+    </div>
+    </div>
+    <div class = "botao-ranking">
+        <ul>
+            <a href="paginaInicial.php">Voltar</a>
+        </ul>
+    </div>
 </body>
 </html>
 <?php
