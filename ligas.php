@@ -25,7 +25,7 @@ if (mysqli_num_rows($resultMinhas) > 0) {
         echo "<div class='bloco-liga'>";
         echo "<strong>" . htmlspecialchars($liga['nome']) . "</strong><br>";
         echo "<em>" . htmlspecialchars($liga['descricao']) . "</em><br>";
-        echo "<a href='rankingLiga.php?liga_id=" . $liga['id'] . "' style='margin-top:8px; display:inline-block;'>Acessar Liga</a>";
+        echo "<a href='pagina_da_liga.php?liga_id=" . $liga['id'] . "' style='margin-top:8px; display:inline-block;'>Acessar Liga</a>";
         echo "</div>";
     }
 } else {
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["liga_id"])) {
             mysqli_stmt_bind_param($stmt3, "ii", $liga_id, $user_id);
             mysqli_stmt_execute($stmt3);
             
-            header("Location: rankingLiga.php?liga_id=" . $liga_id);
+            header("Location: pagina_da_liga.php?liga_id=" . $liga_id);
             exit();
         } else {
             echo "<p style='color:orange;'>Você já está nesta liga.</p>";
