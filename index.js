@@ -107,6 +107,10 @@ window.addEventListener("DOMContentLoaded", function () {
     let caixa = document.getElementById("caixa-texto");
     let botao = document.getElementById("botao");
     let localResposta = document.getElementById("local-resposta");
+    let localBotaoVoltar = document.getElementById("botao-voltar");
+    let linkVoltar = localBotaoVoltar.querySelector("a");
+    linkVoltar.style.pointerEvents = "none";
+    linkVoltar.style.opacity = "0.5";
 
     botao.addEventListener("click", function () {
         let texto = verificaCampo(caixa.value); // Validação aqui!
@@ -131,6 +135,8 @@ window.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("counter").style.display = "none";
                 botao.disabled = true;
                 caixa.disabled = true;
+                linkVoltar.style.pointerEvents = "auto";
+                linkVoltar.style.opacity = "1";
 
                 //Enviar o tempo para o php
                 fetch('salva_ranking.php', {

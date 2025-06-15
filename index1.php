@@ -59,6 +59,9 @@ if ($ja_jogou === true) {
     <div id="local-resposta">
 
     </div>
+    <div class = "botao-voltar" id ="botao-voltar">
+        <a href="paginaInicial.php">Voltar</a>
+    </div>
     <div class="rodape">
         <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</P>
     </div>
