@@ -57,3 +57,12 @@ input[type="submit"]:hover {
     color: #764ba2;
     box-shadow: 0 0 8px #fff;
 }
+.rodape{
+    color: black;
+    margin-top: 50px;
+    flex-shrink: 0; 
+    text-align: center;
+    padding: 10px 0;
+    background: inherit; 
+    font-size: 0.9em;
+}

@@ -67,9 +67,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["liga_id"])) {
 ;
         }
     } else {
-        echo "<p style='color:red;'>Palavra-chave incorreta!</p>";
+        echo "<div class='incorreta'>Palavra-chave incorreta!</div>";
     }
 }
+
 
 // Lista todas as ligas
 $sql = "SELECT * FROM Ligas";
@@ -101,6 +102,7 @@ mysqli_close($conn);
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ligas.css">

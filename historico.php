@@ -25,7 +25,7 @@ $result = mysqli_query($conn, $sql);
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="ranking-container">
+    <div class="historico_css">
         <h1>Histórico de Partidas</h1>
         <table>
             <tr>
@@ -50,10 +50,14 @@ $result = mysqli_query($conn, $sql);
             }
             ?>
         </table>
+
+         </div>
         <div class="botao-ranking">
             <a href="paginaInicial.php">Voltar</a>
         </div>
-    </div>
+          <div class="rodape">
+              <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
+        </div>
 </body>
 </html>
 <?php

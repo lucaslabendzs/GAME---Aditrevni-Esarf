@@ -1,4 +1,5 @@
 body {
+    margin-bottom:60px;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -82,18 +83,14 @@ ul li a:hover {
     max-width: 500px;          /* ← limita largura para manter o visual */
 }
 
-.rodape{
+.rodape {
     color: black;
-    margin-top: 50%;
+    margin-top: 50px;
     flex-shrink: 0; 
     text-align: center;
     padding: 10px 0;
     background: inherit; 
     font-size: 0.9em;
-    position: fixed; 
-    bottom: 0;
-    width: 100%;
-    
 }
 .mensagem-alerta {
     background-color: rgba(255, 165, 0, 0.1); 
@@ -106,4 +103,18 @@ ul li a:hover {
     text-align: center;
     font-size: 0.95em;
 }
+p{
+    text-align: center;
+    
+}
+.incorreta{
+    text-align: center;
+    color:red;
+     background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
 
+}

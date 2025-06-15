@@ -41,6 +41,10 @@
             <a href="rankingSemanal.php">Ranking Semanal</a>
         </div>
     </div>
+    <div class = "historico">
+            <a href="historico.php">historico</a>
+        </div>
+
     
     <header class="titulo">
         <h1>Aditrevni esarf</h1>
@@ -63,10 +67,7 @@
         <input type="submit" value="Iniciar" id="botao-hom" />
     </div>
     
-    <div class = "historico">
-            <a href="historico.php">historico</a>
-        </div>
-
+    
 
     <div class="rodape">
         <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
