@@ -32,10 +32,12 @@ $result = mysqli_query($conn, $sql);
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Ranking Semanal</h1>
+    <div class="ranking-container">
+            <h1>Ranking Semanal (100 melhores)</h1>
+    <div class="ranking">
     <table>
         <tr>
-            <th>Posição</th>
+            <th class="posi">Posição</th>
             <th>Nome</th>
             <th>Pontos</th>
         </tr>
@@ -51,6 +53,8 @@ $result = mysqli_query($conn, $sql);
         }
         ?>
     </table>
+    </div>
+</div>
     <a href="paginaInicial.php">Voltar</a>
 </body>
 </html>

@@ -3,6 +3,14 @@ function inverterFrase(palavra) {
     return palavra.split('').reverse().join('');
 }
 
+// Função de validação semelhante ao PHP
+function verificaCampo(texto) {
+    texto = texto.trim();
+    texto = texto.replace(/<\/?[^>]+(>|$)/g, ""); // remove tags HTML
+    texto = texto.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    return texto;
+}
+
 let hh = 0, mm = 0, ss = 0, ms = 0;
 let tempo = 10;
 let crono;
@@ -101,7 +109,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let localResposta = document.getElementById("local-resposta");
 
     botao.addEventListener("click", function () {
-        let texto = caixa.value;
+        let texto = verificaCampo(caixa.value); // Validação aqui!
         localResposta.innerHTML = "";
         let resposta = document.createElement("p");
 

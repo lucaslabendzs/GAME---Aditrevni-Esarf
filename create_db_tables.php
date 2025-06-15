@@ -84,7 +84,7 @@ if (mysqli_query($conn, $sql_dias)) {
 
 $sql_ligas = "CREATE TABLE IF NOT EXISTS Ligas (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
+    nome VARCHAR(100) NOT NULL UNIQUE,
     descricao TEXT,
     palavra_chave VARCHAR(100) NOT NULL,
     data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP

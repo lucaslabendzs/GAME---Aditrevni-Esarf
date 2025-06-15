@@ -23,18 +23,23 @@ $stmt = mysqli_prepare($conn, $sql);
 mysqli_stmt_bind_param($stmt, "is", $liga_id, $hoje);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
+// Busca o nome da liga para exibir no título
+$sql_liga = "SELECT nome FROM Ligas WHERE id = $liga_id";
+$res_liga = mysqli_query($conn, $sql_liga);
+$nome_liga = ($row = mysqli_fetch_assoc($res_liga)) ? $row['nome'] : "Liga";
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Ranking Diário da Liga</title>
+    <title>Ranking Diário da Liga <?php echo htmlspecialchars($nome_liga); ?></title>
     <link rel="stylesheet" href="rankingDiario.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="ranking-container">
-        <h1>Ranking Diário da Liga</h1>
+        <h1>Ranking Semanal da Liga: <?php echo htmlspecialchars($nome_liga); ?></h1>
         <div class="ranking">
             <table>
                 <tr>
@@ -65,7 +70,7 @@ $result = mysqli_stmt_get_result($stmt);
         </div>
     </div>
     <div class="botao-ranking">
-        <a href="ligas.php">Voltar</a>
+        <a href="pagina_da_liga.php?liga_id=<?php echo $liga_id; ?>">Voltar</a>
     </div>
 </body>
 </html>

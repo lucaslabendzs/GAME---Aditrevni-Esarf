@@ -74,17 +74,22 @@ $sql = "SELECT * FROM Ligas";
 $result = mysqli_query($conn, $sql);
 
 echo "<h2>Ligas disponíveis</h2>";
+
+$ligasHtml = "";
 while ($liga = mysqli_fetch_assoc($result)) {
-    echo "<div style='border:1px solid #ccc; padding:12px; margin-bottom:16px;'>";
-    echo "<strong>" . htmlspecialchars($liga['nome']) . "</strong><br>";
-    echo "<em>" . htmlspecialchars($liga['descricao']) . "</em><br>";
-    echo "<form method='post' style='margin-top:8px;'>";
-    echo "<input type='hidden' name='liga_id' value='" . $liga['id'] . "'>";
-    echo "<input type='password' name='palavra_chave' placeholder='Palavra-chave' required>";
-    echo "<input type='submit' value='Entrar na Liga'>";
-    echo "</form>";
-    echo "</div>";
+    $ligasHtml .= "
+    <div style='border:1px solid #ccc; padding:12px; margin-bottom:16px;'>
+        <strong>" . htmlspecialchars($liga['nome']) . "</strong><br>
+        <em>" . htmlspecialchars($liga['descricao']) . "</em><br>
+        <form method='post' style='margin-top:8px;'>
+            <input type='hidden' name='liga_id' value='" . $liga['id'] . "'>
+            <input type='password' name='palavra_chave' placeholder='Palavra-chave' required>
+            <input type='submit' value='Entrar na Liga'>
+        </form>
+    </div>
+    ";
 }
+echo $ligasHtml;
 
 mysqli_close($conn);
 
@@ -92,7 +97,7 @@ mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

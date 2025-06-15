@@ -16,6 +16,9 @@
 
 
     <div class = "opcoes">
+        <div class = "ligas">
+            <a href="ligas.php">Ligas</a>
+        </div>
         <div class = "login">
             <a href="login.php">Login</a>
         </div>
@@ -25,17 +28,18 @@
         <div class = "logout">
             <a href="logout.php">Logout</a>
         </div>
+        
     </div>
     <div class = "tabelas">
         <div class = "RankingDiario">
-                <a href="rankingDiario.php">Ranking Diario</a>
-            </div>
-            <div class = "RankingGeral">
-                <a href="rankingGeral.php">Ranking Geral</a>
-            </div>
-            <div class = "RankingSemanal">
-                <a href="rankingSemanal.php">Ranking Semanal</a>
-            </div>
+            <a href="rankingDiario.php">Ranking Diario</a>
+         </div>
+        <div class = "RankingGeral">
+            <a href="rankingGeral.php">Ranking Geral</a>
+        </div>
+        <div class = "RankingSemanal">
+            <a href="rankingSemanal.php">Ranking Semanal</a>
+        </div>
     </div>
     <header class="titulo">
         <h1>Aditrevni esarf</h1>
@@ -57,9 +61,7 @@
     <div class="botao-pag">
         <input type="submit" value="Iniciar" id="botao-hom" />
     </div>
-    <div>
-        <a href="ligas.php">Ligas</a>
-    </div>
+    
 
 
     <div class="rodape">

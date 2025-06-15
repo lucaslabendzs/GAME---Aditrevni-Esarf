@@ -33,14 +33,25 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $nome_liga; ?></title>
+     <link rel="stylesheet" href="pagina_da_liga.css">
 </head>
 <body>
-   <h1><?php echo $nome_liga; ?></h1> 
-   <div class="botao-ranking">
-    <a href="rankingLiga.php?liga_id=<?php echo $liga_id; ?>">Ver Ranking Diário da Liga</a>
-</div>
- <div class="botao-ranking">
-    <a href="ranking_geral_ligas.php?liga_id=<?php echo $liga_id; ?>">Ranking geral ligas</a>
-</div>
+    <div class="titulo">
+        <h1><?php echo $nome_liga; ?></h1> 
+    </div>
+    <div class = "opcoes">
+        <div class="botao-ranking">
+            <a href="rankingLiga.php?liga_id=<?php echo $liga_id; ?>">Ver Ranking Diário da Liga</a>
+        </div>
+        <div class="botao-ranking">
+            <a href="ranking_geral_ligas.php?liga_id=<?php echo $liga_id; ?>">Ver Ranking Geral Liga</a>
+        </div>
+        <div class="botao-ranking">
+            <a href="ranking_semanal_ligas.php?liga_id=<?php echo $liga_id; ?>">Ver Ranking Semanal Liga</a>
+        </div>
+        <div class="botao-ranking">
+        <a href="ligas.php">Voltar</a>
+    </div>
+    </div> 
 </body>
 </html>

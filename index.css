@@ -213,17 +213,19 @@ input[type="submit"]:hover {
     color: #764ba2;
     box-shadow: 0 0 8px #fff;
 }
-.tabelas{
+
+.tabelas {
     position: absolute;
     top: 32px;
-    right: 1600px; 
+    left: 40px;
     display: flex;
     gap: 18px;
     z-index: 10;
     margin: 0;
+    flex-wrap: nowrap; /* impede quebra de linha */
 }
-.tabelas a,
-input[type="submit"] {
+
+.tabelas a {
     display: inline-block;
     padding: 10px 32px;
     border-radius: 10px;
@@ -239,9 +241,20 @@ input[type="submit"] {
     cursor: pointer;
     outline: none;
 }
-.tabelas a:hover,
-input[type="submit"]:hover {
+
+.tabelas a:hover {
     background: #eee;
     color: #764ba2;
     box-shadow: 0 0 8px #fff;
+}
+
+/* Responsividade: diminui botões em telas menores */
+@media (max-width: 900px) {
+    .tabelas a {
+        padding: 8px 12px;
+        font-size: 0.95em;
+    }
+    .tabelas {
+        gap: 8px;
+    }
 }
