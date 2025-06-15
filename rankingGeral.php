@@ -73,8 +73,6 @@ $result_ranking = mysqli_query($conn, $sql_ranking);
         }
         ?>
     </table>
-    </div>
-    </div>
     <div class = "botao-ranking">
         <ul>
             <a href="paginaInicial.php">Voltar</a>

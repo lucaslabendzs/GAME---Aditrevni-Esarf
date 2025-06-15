@@ -7,10 +7,12 @@ if (!$conn) {
     die("Erro de conexão: " . mysqli_connect_error());
 }
 
+// Descobre a data do início da semana (segunda-feira)
 $hoje = date('Y-m-d');
-$diaSemana = date('N'); 
+$diaSemana = date('N'); // 1 (segunda) a 7 (domingo)
 $inicioSemana = date('Y-m-d', strtotime("-" . ($diaSemana - 1) . " days", strtotime($hoje)));
 
+// Consulta para ranking semanal
 $sql = "SELECT u.name, SUM(d.pontos) as total_pontos
         FROM DiasCalculados d
         JOIN Users u ON d.user_id = u.id
@@ -30,14 +32,10 @@ $result = mysqli_query($conn, $sql);
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="ranking-container">
-      <header>  
-        <h1>Ranking Semanal(100 melhores)</h1>
-    </header>
-    <div class="ranking">
+    <h1>Ranking Semanal</h1>
     <table>
         <tr>
-            <th class="posi">Posição</th>
+            <th>Posição</th>
             <th>Nome</th>
             <th>Pontos</th>
         </tr>
@@ -53,13 +51,7 @@ $result = mysqli_query($conn, $sql);
         }
         ?>
     </table>
-    </div>
-    </div>
-    <div class = "botao-ranking">
-        <ul>
-            <a href="paginaInicial.php">Voltar</a>
-        </ul>
-    </div>
+    <a href="paginaInicial.php">Voltar</a>
 </body>
 </html>
 <?php

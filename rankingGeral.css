@@ -47,8 +47,7 @@ input[type="submit"] {
 .botao-ranking {
     display: flex;
     justify-content: center;
-    margin-top: 32px;
-
+    margin-top: 24px;
 }
 
 .botao-ranking a:hover,

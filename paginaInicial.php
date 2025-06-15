@@ -30,12 +30,12 @@
         <div class = "RankingDiario">
                 <a href="rankingDiario.php">Ranking Diario</a>
             </div>
-        <div class = "RankingGeral">
+            <div class = "RankingGeral">
                 <a href="rankingGeral.php">Ranking Geral</a>
-         </div>
-         <div class = "RankingSemanal">
+            </div>
+            <div class = "RankingSemanal">
                 <a href="rankingSemanal.php">Ranking Semanal</a>
-         </div>
+            </div>
     </div>
     <header class="titulo">
         <h1>Aditrevni esarf</h1>

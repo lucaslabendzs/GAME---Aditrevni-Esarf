@@ -216,7 +216,7 @@ input[type="submit"]:hover {
 .tabelas{
     position: absolute;
     top: 32px;
-    right: 1400px; 
+    right: 1600px; 
     display: flex;
     gap: 18px;
     z-index: 10;
