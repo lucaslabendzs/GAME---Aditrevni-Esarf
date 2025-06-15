@@ -30,9 +30,12 @@
         <div class = "RankingDiario">
                 <a href="rankingDiario.php">Ranking Diario</a>
             </div>
-            <div class = "RankingGeral">
+        <div class = "RankingGeral">
                 <a href="rankingGeral.php">Ranking Geral</a>
-            </div>
+         </div>
+         <div class = "RankingSemanal">
+                <a href="rankingSemanal.php">Ranking Semanal</a>
+         </div>
     </div>
     <header class="titulo">
         <h1>Aditrevni esarf</h1>
@@ -54,7 +57,7 @@
     <div class="botao-pag">
         <input type="submit" value="Iniciar" id="botao-hom" />
     </div>
-    <div> <!-- Criar css-->
+    <div>
         <a href="ligas.php">Ligas</a>
     </div>
 

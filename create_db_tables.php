@@ -91,9 +91,9 @@ $sql_ligas = "CREATE TABLE IF NOT EXISTS Ligas (
 )";
 
 if (mysqli_query($conn, $sql_ligas)) {
-    echo "<br>Table Ligas created successfully<br>";
+    echo "<br>Criado liga com sucesso <br>";
 } else {
-    echo "<br>Error creating Ligas: " . mysqli_error($conn);
+    echo "<br>Erro ao criar:" . mysqli_error($conn);
 }
 
 $sql_liga_usuarios = "CREATE TABLE IF NOT EXISTS LigaUsuarios (

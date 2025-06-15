@@ -1,3 +1,95 @@
+<?php
+require "db_credentials.php";
+require "force_authenticate.php";
+
+$conn = mysqli_connect($servername, $username, $db_password, $dbname);
+
+
+
+if (!$conn) {
+    die("Erro de conexão: " . mysqli_connect_error());
+}
+
+$sqlMinhasLigas = "SELECT Ligas.id, Ligas.nome, Ligas.descricao 
+                   FROM Ligas 
+                   INNER JOIN LigaUsuarios ON Ligas.id = LigaUsuarios.liga_id 
+                   WHERE LigaUsuarios.user_id = ?";
+$stmtMinhas = mysqli_prepare($conn, $sqlMinhasLigas);
+mysqli_stmt_bind_param($stmtMinhas, "i", $user_id);
+mysqli_stmt_execute($stmtMinhas);
+$resultMinhas = mysqli_stmt_get_result($stmtMinhas);
+
+echo "<h2>Minhas Ligas</h2>";
+if (mysqli_num_rows($resultMinhas) > 0) {
+    while ($liga = mysqli_fetch_assoc($resultMinhas)) {
+        echo "<div class='bloco-liga'>";
+        echo "<strong>" . htmlspecialchars($liga['nome']) . "</strong><br>";
+        echo "<em>" . htmlspecialchars($liga['descricao']) . "</em><br>";
+        echo "<a href='rankingLiga.php?liga_id=" . $liga['id'] . "' style='margin-top:8px; display:inline-block;'>Acessar Liga</a>";
+        echo "</div>";
+    }
+} else {
+    echo "<p>Você ainda não participa de nenhuma liga.</p>";
+}
+// Se o usuário enviou o formulário para entrar em uma liga
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["liga_id"])) {
+    $liga_id = intval($_POST["liga_id"]);
+    $palavra_chave = $_POST["palavra_chave"];
+    $user_id = $_SESSION["user_id"];
+
+    // Verifica se a palavra-chave está correta
+    $sql = "SELECT * FROM Ligas WHERE id = ? AND palavra_chave = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "is", $liga_id, $palavra_chave);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    if (mysqli_num_rows($result) > 0) {
+        // Verifica se o usuário já está na liga
+        $sql2 = "SELECT * FROM LigaUsuarios WHERE liga_id = ? AND user_id = ?";
+        $stmt2 = mysqli_prepare($conn, $sql2);
+        mysqli_stmt_bind_param($stmt2, "ii", $liga_id, $user_id);
+        mysqli_stmt_execute($stmt2);
+        $result2 = mysqli_stmt_get_result($stmt2);
+
+        if (mysqli_num_rows($result2) == 0) {
+            // Adiciona o usuário à liga
+            $sql3 = "INSERT INTO LigaUsuarios (liga_id, user_id) VALUES (?, ?)";
+            $stmt3 = mysqli_prepare($conn, $sql3);
+            mysqli_stmt_bind_param($stmt3, "ii", $liga_id, $user_id);
+            mysqli_stmt_execute($stmt3);
+            
+            header("Location: rankingLiga.php?liga_id=" . $liga_id);
+            exit();
+        } else {
+            echo "<p style='color:orange;'>Você já está nesta liga.</p>";
+        }
+    } else {
+        echo "<p style='color:red;'>Palavra-chave incorreta!</p>";
+    }
+}
+
+// Lista todas as ligas
+$sql = "SELECT * FROM Ligas";
+$result = mysqli_query($conn, $sql);
+
+echo "<h2>Ligas disponíveis</h2>";
+while ($liga = mysqli_fetch_assoc($result)) {
+    echo "<div style='border:1px solid #ccc; padding:12px; margin-bottom:16px;'>";
+    echo "<strong>" . htmlspecialchars($liga['nome']) . "</strong><br>";
+    echo "<em>" . htmlspecialchars($liga['descricao']) . "</em><br>";
+    echo "<form method='post' style='margin-top:8px;'>";
+    echo "<input type='hidden' name='liga_id' value='" . $liga['id'] . "'>";
+    echo "<input type='password' name='palavra_chave' placeholder='Palavra-chave' required>";
+    echo "<input type='submit' value='Entrar na Liga'>";
+    echo "</form>";
+    echo "</div>";
+}
+
+mysqli_close($conn);
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +100,11 @@
 </head>
 <body>
     <div>
-        <a href="criar_ligas.php"> Criar liga</a>
-        <a href="paginaInicial.php">Pagina inicial</a>
+        <ul>
+        <li><a href="criar_ligas.php">Criar ligas</a><li>
+        <li><a href="paginaInicial.php">Pagina inicial</a></li>
+       </ul>
     </div>    
+
 </body>
 </html>
