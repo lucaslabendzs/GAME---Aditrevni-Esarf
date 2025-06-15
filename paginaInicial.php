@@ -41,6 +41,7 @@
             <a href="rankingSemanal.php">Ranking Semanal</a>
         </div>
     </div>
+    
     <header class="titulo">
         <h1>Aditrevni esarf</h1>
     </header>
@@ -62,6 +63,9 @@
         <input type="submit" value="Iniciar" id="botao-hom" />
     </div>
     
+    <div class = "historico">
+            <a href="historico.php">historico</a>
+        </div>
 
 
     <div class="rodape">
