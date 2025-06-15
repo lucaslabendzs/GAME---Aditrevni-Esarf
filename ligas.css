@@ -72,11 +72,7 @@ ul li a:hover {
     text-decoration: underline;
 }
 
-p {
-    text-align: center;
-    font-size: 1em;
-    color: #eee;
-}
+
 .form-liga {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -85,3 +81,29 @@ p {
     width: 90%;
     max-width: 500px;          /* ← limita largura para manter o visual */
 }
+
+.rodape{
+    color: black;
+    margin-top: 50%;
+    flex-shrink: 0; 
+    text-align: center;
+    padding: 10px 0;
+    background: inherit; 
+    font-size: 0.9em;
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    
+}
+.mensagem-alerta {
+    background-color: rgba(255, 165, 0, 0.1); 
+    color: #ffa500; 
+    border: 1px solid #ffa500;
+    padding: 10px 15px;
+    margin: 15px auto;
+    width: fit-content;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.95em;
+}
+

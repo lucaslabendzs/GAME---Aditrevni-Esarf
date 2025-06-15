@@ -63,7 +63,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["liga_id"])) {
             header("Location: pagina_da_liga.php?liga_id=" . $liga_id);
             exit();
         } else {
-            echo "<p style='color:orange;'>Você já está nesta liga.</p>";
+           echo "<div class='mensagem-alerta'>Você já está nesta liga.</div>";
+;
         }
     } else {
         echo "<p style='color:red;'>Palavra-chave incorreta!</p>";
@@ -80,7 +81,6 @@ $ligasHtml = "";
 while ($liga = mysqli_fetch_assoc($result)) {
     $ligasHtml .= "
     <div <div class='form-liga'>
-
         <strong>" . htmlspecialchars($liga['nome']) . "</strong><br>
         <em>" . htmlspecialchars($liga['descricao']) . "</em><br>
         <form method='post' style='margin-top:8px;'>
@@ -112,7 +112,10 @@ mysqli_close($conn);
         <li><a href="criar_ligas.php">Criar ligas</a><li>
         <li><a href="paginaInicial.php">Pagina inicial</a></li>
        </ul>
-    </div>    
+    </div>   
+     <div class="rodape">
+        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
+    </div>
 
 </body>
 </html>

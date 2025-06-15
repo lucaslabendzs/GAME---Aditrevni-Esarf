@@ -53,5 +53,8 @@ mysqli_close($conn);
         <a href="ligas.php">Voltar</a>
     </div>
     </div> 
+    <div class="rodape">
+        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
+    </div>
 </body>
 </html>

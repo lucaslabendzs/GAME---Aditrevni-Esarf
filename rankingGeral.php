@@ -77,6 +77,9 @@ $result_ranking = mysqli_query($conn, $sql_ranking);
     <div class="botao-ranking">
         <a href="paginaInicial.php">Voltar</a>
     </div>
+    <div class="rodape">
+        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
+    </div>
 </body>
 </html>
 <?php

@@ -72,5 +72,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
     <a href="ligas.php">Voltar</a>
   </div>
+   <div class="rodape">
+        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
+    </div>
 </body>
 </html>

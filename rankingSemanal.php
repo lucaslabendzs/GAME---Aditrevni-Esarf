@@ -57,6 +57,9 @@ $result = mysqli_query($conn, $sql);
 </div>
     <a href="paginaInicial.php">Voltar</a>
 </body>
+<div class="rodape">
+        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
+    </div>
 </html>
 <?php
 mysqli_close($conn);

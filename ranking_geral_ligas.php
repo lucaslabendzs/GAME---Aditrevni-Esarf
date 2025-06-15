@@ -69,6 +69,9 @@ $nome_liga = ($row = mysqli_fetch_assoc($res_liga)) ? $row['nome'] : "Liga";
         <a href="pagina_da_liga.php?liga_id=<?php echo $liga_id; ?>">Voltar</a>
     </div>
 </body>
+ <div class="rodape">
+        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
+    </div>
 </html>
 <?php
 mysqli_close($conn);
