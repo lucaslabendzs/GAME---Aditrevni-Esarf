@@ -56,3 +56,12 @@ input[type="submit"]:hover {
     color: #764ba2;
     box-shadow: 0 0 8px #fff;
 }
+.meu-tempo {
+            font-weight: bold;
+        }
+.meu-tempo-info {
+            text-align: center;
+            margin-bottom: 18px;
+            font-size: 1.2em;
+            color: #764ba2;
+        }

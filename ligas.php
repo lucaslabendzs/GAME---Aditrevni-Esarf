@@ -1,4 +1,5 @@
 <?php
+
 require "db_credentials.php";
 require "force_authenticate.php";
 
@@ -78,7 +79,8 @@ echo "<h2>Ligas disponíveis</h2>";
 $ligasHtml = "";
 while ($liga = mysqli_fetch_assoc($result)) {
     $ligasHtml .= "
-    <div style='border:1px solid #ccc; padding:12px; margin-bottom:16px;'>
+    <div <div class='form-liga'>
+
         <strong>" . htmlspecialchars($liga['nome']) . "</strong><br>
         <em>" . htmlspecialchars($liga['descricao']) . "</em><br>
         <form method='post' style='margin-top:8px;'>
@@ -101,6 +103,7 @@ mysqli_close($conn);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ligas.css">
     <title>Ligas</title>
 </head>
 <body>

@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.bloco-liga, .form-liga {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+a, input[type="submit"] {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4c51bf;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover, input[type="submit"]:hover {
+    background-color: #434190;
+}
+
+input[type="password"] {
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    margin-top: 8px;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    font-size: 1em;
+    color: #eee;
+}
+.form-liga {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 20px auto;         /* ← centraliza horizontalmente */
+    width: 90%;
+    max-width: 500px;          /* ← limita largura para manter o visual */
+}

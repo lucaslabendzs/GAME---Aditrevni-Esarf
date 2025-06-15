@@ -43,7 +43,7 @@ $nome_liga = ($row = mysqli_fetch_assoc($res_liga)) ? $row['nome'] : "Liga";
 </head>
 <body>
     <div class="ranking-container">
-        <h1>Ranking Semanal da Liga: <?php echo htmlspecialchars($nome_liga); ?></h1>
+        <h1>Ranking Geral da Liga: <?php echo htmlspecialchars($nome_liga); ?></h1>
         <div class="ranking">
             <table>
                 <tr>
