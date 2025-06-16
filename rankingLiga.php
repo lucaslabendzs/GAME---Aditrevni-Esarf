@@ -7,7 +7,7 @@ if (!$conn) {
     die("Erro de conexão: " . mysqli_connect_error());
 }
 
-$liga_id = intval($_GET['liga_id']); // Recebe o id da liga pela URL
+$liga_id = intval($_GET['liga_id']); // Recebe o id da liga pela URL e verifica se eh inteiro
 date_default_timezone_set('America/Sao_Paulo');
 $hoje = date("Y-m-d");
 
@@ -73,9 +73,7 @@ $nome_liga = ($row = mysqli_fetch_assoc($res_liga)) ? $row['nome'] : "Liga";
         <a href="pagina_da_liga.php?liga_id=<?php echo $liga_id; ?>">Voltar</a>
     </div>
 </body>
- <div class="rodape">
-        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
-    </div>
+
 </html>
 <?php
 mysqli_close($conn);

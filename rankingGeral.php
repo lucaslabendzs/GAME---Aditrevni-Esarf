@@ -24,6 +24,7 @@ while ($linha = mysqli_fetch_assoc($result)) {
     $linha_check_user = mysqli_fetch_assoc($res_check_user);
 
     if ($linha_check_user['total'] == 0) {
+        //calculo dos pontos
         $pontos = 100 - ($pos - 1);
         $sql2 = "INSERT INTO DiasCalculados (user_id, data_jogo, posicao, pontos)
                  VALUES ($user_id, '$data_jogo', $pos, $pontos)";
@@ -77,9 +78,7 @@ $result_ranking = mysqli_query($conn, $sql_ranking);
     <div class="botao-ranking">
         <a href="paginaInicial.php">Voltar</a>
     </div>
-    <div class="rodape">
-        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
-    </div>
+
 </body>
 </html>
 <?php

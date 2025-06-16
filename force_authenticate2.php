@@ -1,6 +1,6 @@
 <?php
   require "authenticate.php";
-
+  //para se o usuario ja estiver logado nao poder acessar algumas paginas(exemplo, login, register)
   if ($login) {
     die("
   <!DOCTYPE html>

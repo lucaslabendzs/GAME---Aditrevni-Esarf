@@ -2,26 +2,28 @@
 require "db_credentials.php";
 require "force_authenticate.php";
 
+//verifica se o parametro id da liga foi passado na url
 if (!isset($_GET['liga_id'])) {
     die("Liga não especificada.");
 }
 
-$liga_id = intval($_GET['liga_id']);
-
+$liga_id = intval($_GET['liga_id']); // pega o id da url e verifica se eh inteiro
+//Conecta ao BD
 $conn = mysqli_connect($servername, $username, $db_password, $dbname);
 if (!$conn) {
     die("Erro de conexão: " . mysqli_connect_error());
 }
-
+//busca o nome da liga pelo id 
 $sql = "SELECT nome FROM Ligas WHERE id = ?";
 $stmt = mysqli_prepare($conn, $sql);
 mysqli_stmt_bind_param($stmt, "i", $liga_id);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
-
+//se liga encontrada
 if ($liga = mysqli_fetch_assoc($result)) {
     $nome_liga = htmlspecialchars($liga['nome']);
-} else {
+} //se nao encontrada, mostra mensagem de erro
+else {
     $nome_liga = "Liga não encontrada";
 }
 

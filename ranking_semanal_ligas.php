@@ -7,7 +7,7 @@ if (!$conn) {
     die("Erro de conexão: " . mysqli_connect_error());
 }
 
-// Pegue o ID da liga pela URL (?liga_id=1)
+// Pegue o ID da liga pela URL e verifica se eh inteiro
 $liga_id = isset($_GET['liga_id']) ? intval($_GET['liga_id']) : 0;
 if ($liga_id <= 0) {
     die("Liga não especificada.");
@@ -74,9 +74,7 @@ $nome_liga = ($row = mysqli_fetch_assoc($res_liga)) ? $row['nome'] : "Liga";
         <a href="pagina_da_liga.php?liga_id=<?php echo $liga_id; ?>">Voltar</a>
     </div>
 </body>
- <div class="rodape">
-        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
-    </div>
+
 </html>
 <?php
 mysqli_close($conn);

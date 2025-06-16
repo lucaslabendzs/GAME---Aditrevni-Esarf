@@ -5,49 +5,55 @@ require "force_authenticate2.php";
 
 $error = false;
 $password = $email = "";
-
+// Se o usuário NÃO está logado e o formulário foi enviado via POST
 if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
+   // Verifica se os campos email e senha foram enviados
   if (isset($_POST["email"]) && isset($_POST["password"])) {
 
     $conn = connect_db();
-
+    // Escapa caracteres especiais para evitar SQL Injection
     $email = mysqli_real_escape_string($conn,$_POST["email"]);
     $password = mysqli_real_escape_string($conn,$_POST["password"]);
-    $password = md5($password);
-
+    $password = md5($password); //faz as senhas ficaram em hash no BD
+    //busca o email o usuario 
     $sql = "SELECT id,name,email,password FROM $table_users
             WHERE email = '$email';";
 
     $result = mysqli_query($conn, $sql);
     if($result){
+      //verifica se encontrou algum usuário com esse email
       if (mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
-
+        //verifica se a senha está correta
         if ($user["password"] == $password) {
-
+          //Salva dados do usuário na sessão
           $_SESSION["user_id"] = $user["id"];
           $_SESSION["user_name"] = $user["name"];
           $_SESSION["user_email"] = $user["email"];
-
+          //manda pra pagina inicial
           header("Location: " . dirname($_SERVER['SCRIPT_NAME']) . "/paginaInicial.php");
           exit();
         }
         else {
+          //exibe esta mensagem caso senha errada
           $error_msg = "Senha incorreta!";
           $error = true;
         }
       }
       else{
+        //exibe esta mensagem caso usuario nao seja encontrado no BD
         $error_msg = "Usuário não encontrado!";
         $error = true;
       }
     }
     else {
+      //Erro ao consultar BD
       $error_msg = mysqli_error($conn);
       $error = true;
     }
   }
   else {
+    //caso campo vazio
     $error_msg = "Por favor, preencha todos os dados.";
     $error = true;
   }

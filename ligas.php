@@ -10,7 +10,7 @@ $conn = mysqli_connect($servername, $username, $db_password, $dbname);
 if (!$conn) {
     die("Erro de conexão: " . mysqli_connect_error());
 }
-
+// busca as ligas que o usuario ja participa, para exibir em minhas ligas
 $sqlMinhasLigas = "SELECT Ligas.id, Ligas.nome, Ligas.descricao 
                    FROM Ligas 
                    INNER JOIN LigaUsuarios ON Ligas.id = LigaUsuarios.liga_id 
@@ -23,6 +23,7 @@ $resultMinhas = mysqli_stmt_get_result($stmtMinhas);
 echo "<h2>Minhas Ligas</h2>";
 if (mysqli_num_rows($resultMinhas) > 0) {
     while ($liga = mysqli_fetch_assoc($resultMinhas)) {
+        //exibe as ligas q o usuario ja participa
         echo "<div class='bloco-liga'>";
         echo "<strong>" . htmlspecialchars($liga['nome']) . "</strong><br>";
         echo "<em>" . htmlspecialchars($liga['descricao']) . "</em><br>";
@@ -67,10 +68,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["liga_id"])) {
 ;
         }
     } else {
-        echo "<div class='incorreta'>Palavra-chave incorreta!</div>";
+        echo "<p style='color:red;'>Palavra-chave incorreta!</p>";
     }
 }
-
 
 // Lista todas as ligas
 $sql = "SELECT * FROM Ligas";
@@ -102,7 +102,6 @@ mysqli_close($conn);
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ligas.css">
@@ -111,7 +110,7 @@ mysqli_close($conn);
 <body>
     <div>
         <ul>
-        <li><a href="criar_ligas.php">Criar ligas</a><li>
+        <li><a href="criar_ligas.php">Criar ligas</a></li>
         <li><a href="paginaInicial.php">Pagina inicial</a></li>
        </ul>
     </div>   

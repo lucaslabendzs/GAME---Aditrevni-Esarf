@@ -30,20 +30,17 @@
         </div>
         
     </div>
-    <div class = "tabelas">
-        <div class = "RankingDiario">
-            <a href="rankingDiario.php">Ranking Diario</a>
-         </div>
-        <div class = "RankingGeral">
-            <a href="rankingGeral.php">Ranking Geral</a>
-        </div>
-        <div class = "RankingSemanal">
-            <a href="rankingSemanal.php">Ranking Semanal</a>
-        </div>
-    </div>
-    <div class = "historico">
-            <a href="historico.php">historico</a>
-        </div>
+
+    <button id="menu-btn" class="menu-btn">&#9776;</button>
+
+
+    <nav id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" id="close-sidebar">&times;</a>
+        <a href="rankingDiario.php">Ranking Diário</a>
+        <a href="rankingGeral.php">Ranking Geral</a>
+        <a href="rankingSemanal.php">Ranking Semanal</a>
+        <a href="historico.php">Histórico</a>
+    </nav>
 
     
     <header class="titulo">

@@ -1,6 +1,6 @@
 <?php
 require "authenticate.php";
-
+//para evitar que os usuarios acessem algumas paginas sem estar logado, exibindo o html abaixo
 if (!$login) {
   die('
   <!DOCTYPE html>

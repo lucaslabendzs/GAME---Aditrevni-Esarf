@@ -4,32 +4,29 @@ require 'db_credentials.php';
 // Criando conexão
 $conn = mysqli_connect($servername, $username, $db_password);
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
 // check conexão
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Ciando BD
+// Cria BD se nao existir
 $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 if (mysqli_query($conn, $sql)) {
-    echo "<br>Database created successfully<br>";
+    echo "<br>Database criado com sucesso<br>";
 } else {
     echo "<br>Error creating database: " . mysqli_error($conn);
 }
 
-// Escolhendo o BD
+// Escolhe o BD
 $sql = "USE $dbname";
 if (mysqli_query($conn, $sql)) {
-    echo "<br>Database changed successfully<br>";
+    echo "<br>Database escolhido com sucesso<br>";
 } else {
-    echo "<br>Error changing database: " . mysqli_error($conn);
+    echo "<br>erro ao escolher database: " . mysqli_error($conn);
 }
 
-// sql to create table user
+// cria tabela usuarios se nao existir
 $sql = "CREATE TABLE IF NOT EXISTS $table_users (
   id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
@@ -45,12 +42,12 @@ $sql = "CREATE TABLE IF NOT EXISTS $table_users (
 
 
 if (mysqli_query($conn, $sql)) {
-    echo "<br>Table created successfully<br>";
+    echo "<br>Table criado com sucesso<br>";
 } else {
-    echo "<br>Error creating database: " . mysqli_error($conn);
+    echo "<br>erro ao criar database: " . mysqli_error($conn);
 }
 
-// sql to create table rankingDiario
+// |Cria tabela para ranking diario se nao existir
 $sql_ranking = "CREATE TABLE IF NOT EXISTS $table_ranking_diario (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT(6) UNSIGNED NOT NULL,
@@ -60,11 +57,11 @@ $sql_ranking = "CREATE TABLE IF NOT EXISTS $table_ranking_diario (
 )";
 
 if (mysqli_query($conn, $sql_ranking)) {
-    echo "<br>Table RankingDiario created successfully<br>";
+    echo "<br>Table RankingDiario criado com sucesso<br>";
 } else {
-    echo "<br>Error creating RankingDiario: " . mysqli_error($conn);
+    echo "<br>erro ao criar RankingDiario: " . mysqli_error($conn);
 }
-
+// Cria tabela dias calculados (utilizado para os rankings semanais e geral) se nao exisitir
 $sql_dias = "CREATE TABLE IF NOT EXISTS $table_dias_calculados (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT(6) UNSIGNED NOT NULL,
@@ -76,13 +73,13 @@ $sql_dias = "CREATE TABLE IF NOT EXISTS $table_dias_calculados (
 )";
 
 if (mysqli_query($conn, $sql_dias)) {
-    echo "<br>Table DiasCalculados created successfully<br>";
+    echo "<br>Table DiasCalculados criado com sucesso<br>";
 } else {
-    echo "<br>Error DiasCalculados: " . mysqli_error($conn);
+    echo "<br>erro ao criar DiasCalculados: " . mysqli_error($conn);
 }
 
-
-$sql_ligas = "CREATE TABLE IF NOT EXISTS Ligas (
+// Cria tabela para ligas se nao existir
+$sql_ligas = "CREATE TABLE IF NOT EXISTS $table_ligas (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL UNIQUE,
     descricao TEXT,
@@ -95,7 +92,7 @@ if (mysqli_query($conn, $sql_ligas)) {
 } else {
     echo "<br>Erro ao criar:" . mysqli_error($conn);
 }
-
+// Cria tabela para associar os usuarios a liga
 $sql_liga_usuarios = "CREATE TABLE IF NOT EXISTS LigaUsuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     liga_id INT NOT NULL,
@@ -109,7 +106,7 @@ if (mysqli_query($conn, $sql_liga_usuarios)) {
 } else {
     echo "<br>Erro ao criar liga: " . mysqli_error($conn);
 }
-
+//fecha a conexao com o BD
 mysqli_close($conn);
 
 ?>

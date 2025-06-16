@@ -214,83 +214,94 @@ input[type="submit"]:hover {
     box-shadow: 0 0 8px #fff;
 }
 
-.tabelas {
+.menu-central {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 40px auto 0 auto;
+    padding: 18px 0;
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    max-width: 700px;
+}
+
+.menu-central a {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border: none;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    outline: none;
+}
+
+.menu-central a:hover {
+    background: #eee;
+    color: #764ba2;
+    box-shadow: 0 0 8px #fff;
+}
+.menu-btn {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    font-size: 2em;
+    background: #764ba2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #764ba2;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.12);
+}
+
+.sidebar a {
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+    display: block;
+    transition: 0.2s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.sidebar a:hover, .sidebar .close-btn:hover {
+    background: #fff;
+    color: #764ba2;
+}
+
+.close-btn {
     position: absolute;
-    top: 32px;
-    left: 40px;
-    display: flex;
-    gap: 18px;
-    z-index: 10;
-    margin: 0;
-    flex-wrap: nowrap; /* impede quebra de linha */
-}
-
-.tabelas a {
-    display: inline-block;
-    padding: 10px 32px;
-    border-radius: 10px;
-    background: #fff;
-    color: #333;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 1.1em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    top: 12px;
+    right: 24px;
+    font-size: 2em;
+    background: none;
     border: none;
-    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    color: #fff;
     cursor: pointer;
-    outline: none;
-}
-
-.tabelas a:hover {
-    background: #eee;
-    color: #764ba2;
-    box-shadow: 0 0 8px #fff;
-}
-
-/* Responsividade: diminui botões em telas menores */
-@media (max-width: 900px) {
-    .tabelas a {
-        padding: 8px 12px;
-        font-size: 0.95em;
-    }
-    .tabelas {
-        gap: 8px;
-    }
-}
-.historico {
-   
-    top: 32px;
-    right: 40px; 
-    display: flex;
-    gap: 18px;
-    z-index: 10;
-    margin: 30px;
-}
-
-.historico a,
-input[type="submit"] {
-    display: inline-block;
-    padding: 10px 30px;
-    border-radius: 10px;
-    background: #fff;
-    color: #333;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 1.1em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border: none;
-    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-    outline: none;
-}
-
-.historico a:hover,
-input[type="submit"]:hover {
-    background: #eee;
-    color: #764ba2;
-    box-shadow: 0 0 8px #fff;
 }
 .historico_css{
   display: flex;
@@ -351,7 +362,4 @@ input[type="submit"]:hover {
     padding: 5px 25px; 
     text-align: center;
     font-size: 1.1em;
-}
-.historico{
-    margin-top: 100px;
 }

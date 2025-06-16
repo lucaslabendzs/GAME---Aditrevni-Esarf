@@ -3,10 +3,10 @@ function inverterFrase(palavra) {
     return palavra.split('').reverse().join('');
 }
 
-// Função de validação semelhante ao PHP
+// Função de validação do campo do jogo
 function verificaCampo(texto) {
     texto = texto.trim();
-    texto = texto.replace(/<\/?[^>]+(>|$)/g, ""); // remove tags HTML
+    texto = texto.replace(/<\/?[^>]+(>|$)/g, "");
     texto = texto.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     return texto;
 }
@@ -89,31 +89,35 @@ window.addEventListener("DOMContentLoaded", function () {
     ["fim do ciclo chegou", "reinicie e revise", "melhore o que fez", "descanse tambem", "orgulho de voce"]
 ];
 
-    
+    //seleciona dia atual
     let diaDoMes = new Date().getDate();
     console.log(diaDoMes);
 
     let i = diaDoMes;
 
-    let j = 0;
+    let j = 0; //indice da frase atual
     let fraseAtual = array[i][j];
     let frase = document.getElementById("frase");
     let aparecerFrase = document.createElement("p");
     aparecerFrase.textContent = "A frase é: " + fraseAtual;
     frase.appendChild(aparecerFrase);
 
+    //inverte a frase para o usuario digitar
     let inverteFrase = inverterFrase(fraseAtual);
+    //colinha para testes
     console.log(inverteFrase);
+
     let caixa = document.getElementById("caixa-texto");
     let botao = document.getElementById("botao");
     let localResposta = document.getElementById("local-resposta");
     let localBotaoVoltar = document.getElementById("botao-voltar");
     let linkVoltar = localBotaoVoltar.querySelector("a");
+    //deixa desabilitado o botao voltar, até o fim do jogo
     linkVoltar.style.pointerEvents = "none";
     linkVoltar.style.opacity = "0.5";
 
     botao.addEventListener("click", function () {
-        let texto = verificaCampo(caixa.value); // Validação aqui!
+        let texto = verificaCampo(caixa.value); // Validação o texto do campo, para nao haver problemas
         localResposta.innerHTML = "";
         let resposta = document.createElement("p");
 
@@ -124,17 +128,20 @@ window.addEventListener("DOMContentLoaded", function () {
             
 
             if (j < 5) {
+                //para mostrar proxima frase
                 fraseAtual = array[i][j];
                 aparecerFrase.textContent = "A frase é: " + fraseAtual;
                 inverteFrase = inverterFrase(fraseAtual);
                 console.log(inverteFrase);
             } else {
+                //fim do game
                 stop();
                 let tempoUser = document.getElementById("counter").textContent;
                 aparecerFrase.textContent = "Parabéns! Você completou todas as frases! Seu tempo foi: " +  tempoUser;
                 document.getElementById("counter").style.display = "none";
                 botao.disabled = true;
                 caixa.disabled = true;
+                //abilita o botao voltar
                 linkVoltar.style.pointerEvents = "auto";
                 linkVoltar.style.opacity = "1";
 

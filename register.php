@@ -8,11 +8,12 @@ $name = $email = "";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  //verfica se todos os campos foram preenchidos
   if (!empty($_POST["name"]) && !empty($_POST["email"]) && 
       !empty($_POST["password"]) && !empty($_POST["confirm_password"])) {
 
     $conn = connect_db();
-
+        //retira caracteres especiais para evitar injection
     $name = mysqli_real_escape_string($conn, $_POST["name"]);
     $email = mysqli_real_escape_string($conn, $_POST["email"]);
     $password = mysqli_real_escape_string($conn, $_POST["password"]);
@@ -42,8 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $error_msg = "Este nome já está cadastrado.";
           $error = true;
         } else if ($password == $confirm_password) {
-          $password = md5($password);
-
+          $password = md5($password); //criptografa senha
+          //insere o novo usuario no BD
           $sql = "INSERT INTO $table_users
                   (name, email, password) VALUES
                   ('$name', '$email', '$password');";

@@ -1,3 +1,4 @@
+<!-- Mensagem para usuario que ja jogou hoje -->
 <!DOCTYPE html>
   <html lang='en'>
   <head>

@@ -9,7 +9,7 @@ if (!$conn) {
 $user_id = $_SESSION['user_id'];
 date_default_timezone_set('America/Sao_Paulo');
 $hoje = date('Y-m-d');
-
+//consulta na tabela se o usuario ja jogou naquele dia
 $sql = "SELECT id FROM RankingDiario WHERE user_id = $user_id AND data_jogo = '$hoje'";
 $result = mysqli_query($conn, $sql);
 $ja_jogou = mysqli_num_rows($result) > 0;

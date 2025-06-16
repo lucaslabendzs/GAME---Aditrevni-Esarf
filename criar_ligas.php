@@ -2,21 +2,24 @@
 require "db_credentials.php";
 require "force_authenticate.php";
 
+// função de validação de campos basica e para limpar campo
 function verifica_campo($texto){
     $texto = trim($texto);
     $texto = stripslashes($texto);
     $texto = htmlspecialchars($texto);
     return $texto;
 }
-
+//Conecta ao BD
 $conn = mysqli_connect($servername, $username, $db_password, $dbname);
 if (!$conn) {
     die("Erro de conexão: " . mysqli_connect_error());
 }
 
-$mensagem = "";
+$mensagem = ""; //variavel para mensagem de erro ou confirmação
 
+//verifica se o form foi enviado via POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //utiliza a função acima pra validar os campos
     $nome = verifica_campo($_POST['nome']);
     $descricao = verifica_campo($_POST['descricao']);
     $palavra_chave = verifica_campo($_POST['palavra_chave']);

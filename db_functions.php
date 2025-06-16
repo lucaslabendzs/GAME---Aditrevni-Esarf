@@ -1,6 +1,6 @@
 <?php
 require "db_credentials.php";
-
+//função para conectar com o banco de dados utilizando variaveis globais
 function connect_db(){
   global $servername, $username, $db_password, $dbname;
   $conn = mysqli_connect($servername, $username, $db_password, $dbname);
@@ -11,7 +11,7 @@ function connect_db(){
 
   return($conn);
 }
-
+// função para fechar a conexão com o banco de dados
 function disconnect_db($conn){
   mysqli_close($conn);
 }

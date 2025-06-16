@@ -34,32 +34,32 @@ $result = mysqli_query($conn, $sql);
 <body>
     <div class="ranking-container">
             <h1>Ranking Semanal (100 melhores)</h1>
-    <div class="ranking">
-    <table>
-        <tr>
-            <th class="posi">Posição</th>
-            <th>Nome</th>
-            <th>Pontos</th>
-        </tr>
-        <?php
-        $posicao = 1;
-        while ($linha = mysqli_fetch_assoc($result)) {
-            echo "<tr>
-                    <td>{$posicao}</td>
-                    <td>{$linha['name']}</td>
-                    <td>{$linha['total_pontos']}</td>
-                  </tr>";
-            $posicao++;
-        }
-        ?>
-    </table>
+        <div class="ranking">
+            <table>
+                <tr>
+                    <th class="posi">Posição</th>
+                    <th>Nome</th>
+                    <th>Pontos</th>
+                </tr>
+                <?php
+                $posicao = 1;
+                while ($linha = mysqli_fetch_assoc($result)) {
+                    echo "<tr>
+                            <td>{$posicao}</td>
+                            <td>{$linha['name']}</td>
+                            <td>{$linha['total_pontos']}</td>
+                          </tr>";
+                    $posicao++;
+                }
+                ?>
+            </table>
+        </div>
     </div>
-</div>
-    <a href="paginaInicial.php">Voltar</a>
+    <div class="botao-ranking">
+        <a href="paginaInicial.php">Voltar</a>
+    </div>
+   
 </body>
-<div class="rodape">
-        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
-    </div>
 </html>
 <?php
 mysqli_close($conn);

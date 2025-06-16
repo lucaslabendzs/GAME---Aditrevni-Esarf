@@ -9,7 +9,8 @@
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.12);
     margin: 40px auto;
-    max-width: 40%;
+    max-width: 900px;
+    width: 90%
 }
 
 .titulo {
@@ -64,4 +65,4 @@ input[type="submit"]:hover {
             margin-bottom: 18px;
             font-size: 1.2em;
             color: #764ba2;
-        }
+}

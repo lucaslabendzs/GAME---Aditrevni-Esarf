@@ -118,4 +118,35 @@ input[type="submit"]:hover {
 .cronometro{
     text-align: center;
 }
+.botao-voltar a,
+input[type="submit"] {
+    justify-content: center;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    outline: none;
+}
+.botao-voltar {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.botao-voltar a:hover,
+input[type="submit"]:hover {
+    background: #eee;
+    color: #764ba2;
+    box-shadow: 0 0 8px #fff;
+}
+
 

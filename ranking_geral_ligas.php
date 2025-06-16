@@ -2,11 +2,12 @@
 require "db_credentials.php";
 require "force_authenticate.php";
 
+// Verifica se o parâmetro liga_id foi passado na URL
 if (!isset($_GET['liga_id'])) {
     die("Liga não especificada.");
 }
 
-$liga_id = intval($_GET['liga_id']);
+$liga_id = intval($_GET['liga_id']); // pega o id da url e verifica se eh inteiro
 
 
 $conn = mysqli_connect($servername, $username, $db_password, $dbname);
@@ -37,13 +38,13 @@ $nome_liga = ($row = mysqli_fetch_assoc($res_liga)) ? $row['nome'] : "Liga";
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Ranking Geral da Liga</title>
+    <title>Ranking Geral da Liga <?php echo htmlspecialchars($nome_liga); ?></title>
     <link rel="stylesheet" href="rankingGeral.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="ranking-container">
-        <h1>Ranking Geral da Liga: <?php echo htmlspecialchars($nome_liga); ?></h1>
+        <h1>Ranking Semanal da Liga: <?php echo htmlspecialchars($nome_liga); ?></h1>
         <div class="ranking">
             <table>
                 <tr>
@@ -69,9 +70,6 @@ $nome_liga = ($row = mysqli_fetch_assoc($res_liga)) ? $row['nome'] : "Liga";
         <a href="pagina_da_liga.php?liga_id=<?php echo $liga_id; ?>">Voltar</a>
     </div>
 </body>
- <div class="rodape">
-        <p>© 2025 Kauan Calegari, Lucas Labendzs, Renan Teles. Todos os direitos reservados.</p>
-    </div>
 </html>
 <?php
 mysqli_close($conn);
