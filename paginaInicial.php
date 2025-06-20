@@ -14,23 +14,30 @@
 </head>
 <body>
 
-
-    <div class = "opcoes">
-        <div class = "ligas">
-            <a href="ligas.php">Ligas</a>
+    <?php
+    if(!$login){
+    echo "
+    <div class = 'opcoes'>
+        <div class = 'login'>
+            <a href='login.php'>Login</a>
         </div>
-        <div class = "login">
-            <a href="login.php">Login</a>
+        <div class = 'registro'>
+            <a href='register.php'>Registrar-se</a>
         </div>
-        <div class = "registro">
-            <a href="register.php">Registrar-se</a>
+        </div>";
+    } else{
+        echo "
+        <div class = 'opcoes'>
+        <div class = 'ligas'>
+            <a href='ligas.php'>Ligas</a>
         </div>
-        <div class = "logout">
-            <a href="logout.php">Logout</a>
+        <div class = 'logout'>
+            <a href='logout.php'>Logout</a>
         </div>
-        
-    </div>
-
+        </div>";
+    }
+    
+    ?>
     <button id="menu-btn" class="menu-btn">&#9776;</button>
 
 
