@@ -64,7 +64,7 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="utf-8">
   <title>Login</title>
-   <link rel="stylesheet" href="css/login.css">
+   <link rel="stylesheet" href="CSS/login.css">
 </head>
 <body>
 <h1>Login</h1>

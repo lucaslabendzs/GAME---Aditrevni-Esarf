@@ -35,7 +35,7 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $nome_liga; ?></title>
-     <link rel="stylesheet" href="pagina_da_liga.css">
+     <link rel="stylesheet" href="CSS/pagina_da_liga.css">
 </head>
 <body>
     <div class="titulo">

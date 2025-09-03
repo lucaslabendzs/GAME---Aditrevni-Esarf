@@ -43,8 +43,8 @@ $nome_liga = ($row = mysqli_fetch_assoc($res_liga)) ? $row['nome'] : "Liga";
 <head>
     <meta charset="UTF-8">
     <title>Ranking Semanal da Liga <?php echo htmlspecialchars($nome_liga); ?></title>
-    <link rel="stylesheet" href="rankingSemanal.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="CSS/rankingSemanal.css">
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
     <div class="ranking-container">

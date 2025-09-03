@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="register.css">
+  <link rel="stylesheet" href="CSS/register.css">
   <meta charset="utf-8">
   <title>[WEB 1] Exemplo Sistema de Login - Registro</title>
 </head>

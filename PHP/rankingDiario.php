@@ -42,8 +42,8 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranking Diário</title>
-    <link rel="stylesheet" href="rankingDiario.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="CSS/rankingDiario.css">
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
 

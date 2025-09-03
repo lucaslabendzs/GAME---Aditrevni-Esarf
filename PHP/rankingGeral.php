@@ -48,8 +48,8 @@ $result_ranking = mysqli_query($conn, $sql_ranking);
 <head>
     <meta charset="UTF-8">
     <title>Ranking Geral</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="rankingGeral.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/rankingGeral.css">
 </head>
 <body>
     <div class="ranking-container">

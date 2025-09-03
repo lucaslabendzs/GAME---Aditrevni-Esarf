@@ -28,8 +28,8 @@ $result = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <title>Ranking Semanal</title>
-    <link rel="stylesheet" href="rankingSemanal.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="CSS/rankingSemanal.css">
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
     <div class="ranking-container">

@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Criar Liga</title>
-    <link rel="stylesheet" href="criar_ligas.css">
+    <link rel="stylesheet" href="CSS/criar_ligas.css">
 </head>
 <body>
   <div class="liga-container">
