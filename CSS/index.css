@@ -1,0 +1,365 @@
+body{
+    background: #3F5EFB;
+     background: linear-gradient(to right, #667eea, #764ba2);
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}   
+
+.titulo{ 
+    font-size: 20px;
+    -webkit-text-stroke: #333 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color:white;
+    margin-top: 40px;
+    
+}
+
+.caixa{
+    text-align: center;
+}
+
+
+#caixa-texto{
+    width: 300px;
+    height: 20px;
+}
+
+.caixa2{
+    padding-top: 5px;
+    text-align: center;
+}
+
+.frase{
+    font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #534d4d, #000000);
+  font-size: 20px;
+  padding: 1px 10px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  margin: 40px auto 30px;
+  width: fit-content;
+  max-width: 90%;
+ 
+
+ 
+}
+
+input{
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+input[type="text"], input[type="submit"] {
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 8px #fff;
+}
+
+input[type="submit"] {
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #eee;
+}
+.caixa, .caixa2 {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: fit-content;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+.rodape {
+    flex-shrink: 0; 
+    text-align: center;
+    padding: 10px 0;
+    background: inherit; 
+    font-size: 0.9em;
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    
+}
+
+#local-resposta{
+    margin-block: 30px;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    text-align: center;
+    
+}   
+
+#local-resposta p {
+  background: #ffffff;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 15px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+ 
+}  
+
+.Titulo_reg{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 45px;
+    font-size: 23px;
+    font-weight: bold;
+    
+}
+#regras {
+    width: 60%;
+    margin: 70px auto 32px auto;
+    padding: 36px 40px;
+    background: linear-gradient(135deg, rgba(40,40,40,0.95) 80%, #764ba2 100%);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(118, 75, 162, 0.25), 0 1.5px 8px 0 #667eea55;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.35em;
+    text-align: justify;
+    line-height: 2.0;
+    border: 1.5px solid #764ba2;
+    position: relative;
+    overflow: hidden;
+}
+
+#regras::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #667eea55 0%, transparent 70%);
+    z-index: 0;
+}
+
+#regras ul {
+    list-style: decimal inside;
+    padding-left: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+#regras li {
+    margin-bottom: 18px;
+    padding-left: 4px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 8px #0008;
+    transition: color 0.2s;
+}
+
+#regras li:hover {
+    color: #764ba2;
+}
+
+.botao-pag{
+    text-align: center;
+    margin-top: 10px;
+}
+.opcoes {
+    position: absolute;
+    top: 32px;
+    right: 40px; 
+    display: flex;
+    gap: 18px;
+    z-index: 10;
+    margin: 0;
+}
+
+.opcoes a,
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    outline: none;
+}
+
+.opcoes a:hover,
+input[type="submit"]:hover {
+    background: #eee;
+    color: #764ba2;
+    box-shadow: 0 0 8px #fff;
+}
+
+.menu-central {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 40px auto 0 auto;
+    padding: 18px 0;
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    max-width: 700px;
+}
+
+.menu-central a {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border: none;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    outline: none;
+}
+
+.menu-central a:hover {
+    background: #eee;
+    color: #764ba2;
+    box-shadow: 0 0 8px #fff;
+}
+.menu-btn {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    font-size: 2em;
+    background: #764ba2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #764ba2;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.12);
+}
+
+.sidebar a {
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+    display: block;
+    transition: 0.2s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.sidebar a:hover, .sidebar .close-btn:hover {
+    background: #fff;
+    color: #764ba2;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 24px;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.historico_css{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    min-height: 60vh;
+    margin: 32px 24px; 
+    background: rgba(241, 237, 237, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    margin: 40px auto;
+    max-width: 40%;
+}
+
+.historico_ table {
+    border-spacing: 80px 12px;
+}
+.botao-ranking a,
+input[type="submit"] {
+    justify-content: center;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    outline: none;
+}
+.historico_css {
+    display: flex;
+    margin-top: 24px;
+}
+
+.botao-ranking a:hover,
+input[type="submit"]:hover {
+    background: #eee;
+    color: #764ba2;
+    box-shadow: 0 0 8px #fff;
+}
+.botao-ranking{
+    display:flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.titulo-historico{
+    margin: 15px;
+}
+.historico_css table th,
+.historico_css table td {
+    padding: 5px 25px; 
+    text-align: center;
+    font-size: 1.1em;
+}
